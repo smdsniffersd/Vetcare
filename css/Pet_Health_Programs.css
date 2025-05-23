@@ -121,6 +121,7 @@ a:active {
     display: block;
     color: #1B1B1B;
 }
+
 .button_class .Book {
     background-color: #FF9900;
     border: 0;
@@ -146,6 +147,7 @@ a:active {
     border-width: 1px;
     cursor: pointer; 
     transition: 0.3s;
+    border: 1px solid black;
 }
 .button_class .Get:hover {
     opacity: 0.8; 
@@ -153,7 +155,7 @@ a:active {
 }
 .button_class{
     width: 18%;
-    margin: auto;
+    margin: 3% auto;
 }
 .first-line-img {
     margin-left: 5%;
