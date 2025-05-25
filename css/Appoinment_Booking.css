@@ -955,3 +955,50 @@ letter-spacing: 0%;
     display: block; /* Каждое изображение на своей строке */
     margin-bottom: 10px; /* Добавляем отступ снизу для визуального разделения */
 }
+.button_class {
+    display: inline-flex;
+    width: 50%;
+    margin-top: 3% !important;
+    gap: 10px; /* Отступ между кнопками внутри */
+}
+
+.button_class > div {
+    display: flex; /* Изменяем на flex для горизонтального расположения кнопок */
+    width: auto; /* Убираем фиксированную ширину, чтобы адаптироваться к содержимому */
+    gap: 10px; /* Отступ между кнопками */
+}
+
+.button_class .Book {
+    background-color: #FF9900;
+    border: 0px;
+    color: white;
+    border-radius: 25px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.button_class .Get {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 25px;
+    font-size: 16px;
+    padding: 10px;
+}
+.eigth-button{
+    font-family: 'Inter Tight';
+font-weight: 500;
+font-size: 18px;
+line-height: 26px;
+letter-spacing: 0%;
+color:  #FFFFFF;
+width: 140;
+height: 50;
+gap: 10px;
+border-radius: 44px;
+padding-top: 12px;
+padding-right: 24px;
+padding-bottom: 12px;
+padding-left: 24px;
+background: #FF9900;
+border: none;
+}

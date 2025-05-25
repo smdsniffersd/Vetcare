@@ -284,6 +284,12 @@ margin-bottom: 3%;
     letter-spacing: 0%;
     color: #1B1B1B;
 }
+.Text-descr-span:last-child{
+  margin-bottom: 15%;
+}
+.Text-descr{
+  margin-bottom: 30px;
+}
 .underline-img{
     width: 20%;
     height: 10%;
@@ -291,7 +297,10 @@ margin-bottom: 3%;
     margin-left: 20%;
 }
 .Pet-text{
+    display: flex;
+    flex-direction: column;
     width: 50%;
+    gap: 10px;
 }
 .Pet-photo{
     width: 50%;
@@ -651,9 +660,35 @@ background-color: #FF9900;
     gap: 3%;
 }
 
+.button_class {
+    display: inline-flex;
+    width: 50%;
+    margin-top: 3% !important;
+    gap: 10px; /* Отступ между кнопками внутри */
+}
 
+.button_class > div {
+    display: flex; /* Изменяем на flex для горизонтального расположения кнопок */
+    width: auto; /* Убираем фиксированную ширину, чтобы адаптироваться к содержимому */
+    gap: 10px; /* Отступ между кнопками */
+}
 
+.button_class .Book {
+    background-color: #FF9900;
+    border: 0px;
+    color: white;
+    border-radius: 25px;
+    font-size: 16px;
+    padding: 10px;
+}
 
+.button_class .Get {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 25px;
+    font-size: 16px;
+    padding: 10px;
+}
 
 .second-section-left-block-left-button-2>img{
     width: 45px;

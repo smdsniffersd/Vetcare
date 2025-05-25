@@ -61,6 +61,12 @@ a:active {
     font-size: 16px;
     cursor: pointer; 
     transition: 0.3s;
+    border: 1px solid black;
+    text-align: center;
+  }
+  .Contact_button > span {
+    display: inline-flex;
+    margin-top: 7%;
   }
 .Contact_button:hover {
     opacity: 0.8; 
@@ -69,6 +75,7 @@ a:active {
 .first-section-img {
     min-width: 1376px;
     width: 98%;
+    height: 55vh;
     display: flex;
     margin: 3% auto;  
     justify-content: center; 
@@ -90,16 +97,29 @@ a:active {
 }
 .about_us_first_section-left{
     min-width: 25.7%;
-    min-height: 456px;
+    min-height: 456px !important    ;
+    border-top-left-radius: 120px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 120px;
+    border-bottom-left-radius: 24px;
+
 }
 .about_us_first_section-right{   
     min-width: 25.7%;
     min-height: 456px;
+
+    border-top-left-radius: 24px;
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 120px;
+
 }
 .about_us_first_section-midl{
     margin: 0 24px 0 24px;
     width: 40%;
     min-width: 46.22%;
+    border-radius: 262px;
+
 }
 .first-section-BIG-text-span{
     font-family: 'Inter Tight';
@@ -146,14 +166,19 @@ a:active {
     border-width: 1px;
     cursor: pointer; 
     transition: 0.3s;
+    border: 1px solid black;
+    display: block;
 }
 .button_class .Get:hover {
     opacity: 0.8; 
     transform: scale(1.05); 
 }
 .button_class{
-    width: 18%;
+    width: 20%;
+    display: flex;
     margin: auto;
+    margin-top: 3%;
+
 }
 .first-line-img {
     margin-left: 5%;
@@ -280,10 +305,14 @@ cursor: pointer;
     grid-template-rows: 1fr auto;
     position: relative;
     min-height: 700px;
-    background: url("../image/blog-tree-section-img.png") no-repeat center/cover;
+    background: url("../image/funny-white-samoyed-dog-sit-outdoor-in-bushes-park.jpg") no-repeat center/cover;
     width: 45%;
     border-radius: 24px;
 }
+.tree-section-main-element-img-block > div:last-child{
+    background: url("../image/funny-white-dog.png") no-repeat center/cover;
+}
+
 
 .tree-section-main-element-img-block-bottom-element {
     grid-row: 2;
@@ -501,19 +530,19 @@ color: #1B1B1B;
 }
 .fourth-section-img-block-img:first-child{
     width: 20%;
-background: url("../image/blog-fouth-section-first-img.png") no-repeat center/cover;
+background: url("../image/cute-funny-shih-tzu-breed-dog-outdoors-dog-groomi.png") no-repeat center/cover;
 }
 .fourth-section-img-block-img:nth-child(2){
     width: 34.51%;
-    background: url("../image/blog-fouth-section-second-img.png") no-repeat center/cover;
+    background: url("../image/couple-with-pet-golden-retriever-dog.png") no-repeat center/cover;
 }
 .fourth-section-img-block-img:nth-child(3){
     width: 25.76%;
-     background: url("../image/blog-fouth-section-tree-img.png") no-repeat center/cover;
+     background: url("../image/grooming-salon-a-small-king-spaniel-dog-a-groomer.png") no-repeat center/cover;
 }
 .fourth-section-img-block-img:nth-child(4){ 
     width: 23.26%;
-    background: url("../image/blog-fouth-section-fourth-img.png") no-repeat center/cover;
+    background: url("../image/low-angle-view-of-freelancer-teaching-her-dog.png") no-repeat center/cover;
 }
 .fourth-section-img-block-img > div {
     grid-row: 2;

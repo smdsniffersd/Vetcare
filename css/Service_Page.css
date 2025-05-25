@@ -373,6 +373,8 @@ margin-bottom: 3%;
 .pet-service-img{
     width: 628px;
     height: 508px;
+    object-fit: cover;
+    border-radius: 24px;
 }
 .eiwei{
     width: 95%;
@@ -459,7 +461,7 @@ margin-bottom: 3%;
     margin-bottom: 18px;
 }
 .photo-get{
-    background: url('../image/service-our-service-get-photo.png');
+    background: url('../image/cute-funny-shih-tzu-breed-dog-outdoors-dog-groomi.png');
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;

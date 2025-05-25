@@ -248,6 +248,7 @@ display: block;
 width: 367px;
 height: 460px;
 border-radius: 24px;
+object-fit: cover;
 
 
 }
@@ -552,4 +553,30 @@ letter-spacing: 0%;
 .lapka_imge img {
     display: block; 
     margin-bottom: 10px;
+}
+.about_us_first_section-left{
+    min-width: 25.7%;
+    min-height: 456px !important    ;
+    border-top-left-radius: 120px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 120px;
+    border-bottom-left-radius: 24px;
+
+}
+.about_us_first_section-right{   
+    min-width: 25.7%;
+    min-height: 456px;
+
+    border-top-left-radius: 24px;
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 120px;
+
+}
+.about_us_first_section-midl{
+    margin: 0 24px 0 24px;
+    width: 40%;
+    min-width: 46.22%;
+    border-radius: 262px;
+
 }

@@ -90,16 +90,29 @@ a:active {
 }
 .about_us_first_section-left{
     min-width: 25.7%;
-    min-height: 456px;
+    min-height: 456px !important    ;
+    border-top-left-radius: 120px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 120px;
+    border-bottom-left-radius: 24px;
+
 }
 .about_us_first_section-right{   
     min-width: 25.7%;
     min-height: 456px;
+
+    border-top-left-radius: 24px;
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 120px;
+
 }
 .about_us_first_section-midl{
     margin: 0 24px 0 24px;
     width: 40%;
     min-width: 46.22%;
+    border-radius: 262px;
+
 }
 .first-section-BIG-text-span{
     font-family: 'Inter Tight';
@@ -174,7 +187,7 @@ a:active {
 .second-block-element-midle-photo{
     min-width: 46%;
     min-height: 681px;
-    background: url(../image/pet-programs-midle.png);
+    background: url(../image/animals-for-examination-and-treatment-in-the-veter.jpg);
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
@@ -741,6 +754,8 @@ box-shadow: 0px 4px 12px 10px rgba(0, 0, 0, 0.04);
 }
 .Pet-Health-Programs-fourth-secstion-img{
     width: 50%;
+    object-fit: cover;
+    border-radius: 24px;
 }
 .fourth-section-ul{
     width: 50%;
