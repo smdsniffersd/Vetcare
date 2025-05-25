@@ -90,16 +90,29 @@ a:active {
 }
 .about_us_first_section-left{
     min-width: 25.7%;
-    min-height: 456px;
+    min-height: 456px !important    ;
+    border-top-left-radius: 120px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 120px;
+    border-bottom-left-radius: 24px;
+
 }
 .about_us_first_section-right{   
     min-width: 25.7%;
     min-height: 456px;
+
+    border-top-left-radius: 24px;
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 120px;
+
 }
 .about_us_first_section-midl{
     margin: 0 24px 0 24px;
     width: 40%;
     min-width: 46.22%;
+    border-radius: 262px;
+
 }
 .first-section-BIG-text-span{
     font-family: 'Inter Tight';
@@ -134,7 +147,8 @@ a:active {
 }
 .button_class .Book:hover {
     opacity: 0.8; 
-    transform: scale(1.05); 
+    transform: scale(1.05);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   }
 .button_class  .Get{
     background-color: rgb(255, 255, 255);
@@ -151,6 +165,7 @@ a:active {
 .button_class .Get:hover {
     opacity: 0.8; 
     transform: scale(1.05); 
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 .button_class{
     width: 18%;
@@ -178,6 +193,7 @@ a:active {
     margin: auto;
 }
 .second-section-content{
+    width: 100%;
     background-color: #F5F5F5;
     display: flex;
     justify-content: center;
@@ -195,6 +211,7 @@ a:active {
     padding: 14px;
     height: 10%;
     width: 110%;
+    padding-bottom: 24px;
 }
 .second-section-ul-li-text-div{
     display: inline-block;
@@ -209,7 +226,7 @@ a:active {
     object-fit: cover;
     height: auto;
     margin-left: 3%;
-    max-height: 80%;/
+    height: 82vh;
 }
 .second-section-ul-li>img{
     width: 45px;
@@ -244,7 +261,8 @@ a:active {
     margin-bottom: 12px;
 }
 .second-section-text{
-    margin-right: 5%;
+    width: 50%;
+    margin-right: 3%;
 }
 .third-section {
     margin: auto;
@@ -475,6 +493,7 @@ a:active {
     width: 314px;
     height: 321px;
     border-radius: 24px;
+    object-fit: cover;
 }
 .doctors-descrip-big {
     position: absolute;

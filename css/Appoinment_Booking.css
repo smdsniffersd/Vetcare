@@ -80,6 +80,7 @@ main {
     background-repeat: no-repeat;
     background-size: 15%;
     background-position: 90% 15%;
+    padding-bottom: 3%;
 }
 .text_info {
     width: 50%;
@@ -963,9 +964,9 @@ letter-spacing: 0%;
 }
 
 .button_class > div {
-    display: flex; /* Изменяем на flex для горизонтального расположения кнопок */
-    width: auto; /* Убираем фиксированную ширину, чтобы адаптироваться к содержимому */
-    gap: 10px; /* Отступ между кнопками */
+    display: flex;
+    width: auto;
+    gap: 10px;
 }
 
 .button_class .Book {
@@ -986,19 +987,19 @@ letter-spacing: 0%;
 }
 .eigth-button{
     font-family: 'Inter Tight';
-font-weight: 500;
-font-size: 18px;
-line-height: 26px;
-letter-spacing: 0%;
-color:  #FFFFFF;
-width: 140;
-height: 50;
-gap: 10px;
-border-radius: 44px;
-padding-top: 12px;
-padding-right: 24px;
-padding-bottom: 12px;
-padding-left: 24px;
-background: #FF9900;
-border: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    color:  #FFFFFF;
+    width: 140;
+    height: 50;
+    gap: 10px;
+    border-radius: 44px;
+    padding-top: 12px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    background: #FF9900;
+    border: none;
 }

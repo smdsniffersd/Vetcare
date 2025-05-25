@@ -80,6 +80,7 @@ main {
     background-repeat: no-repeat;
     background-size: 15%;
     background-position: 90% 15%;
+    padding-bottom: 2.5%;
 }
 .text_info {
     width: 50%;
@@ -285,7 +286,7 @@ margin-bottom: 3%;
     color: #1B1B1B;
 }
 .Text-descr-span:last-child{
-  margin-bottom: 15%;
+  margin-bottom: 5%;
 }
 .Text-descr{
   margin-bottom: 30px;
@@ -297,10 +298,7 @@ margin-bottom: 3%;
     margin-left: 20%;
 }
 .Pet-text{
-    display: flex;
-    flex-direction: column;
     width: 50%;
-    gap: 10px;
 }
 .Pet-photo{
     width: 50%;
@@ -466,12 +464,13 @@ border: none;
   width: 100px !important;
   height: 100px !important;
   object-fit: contain;
+  border-radius: 24px;
 }
 .main-image-bellas-text-block > div{
   display: flex;
   justify-content: center;
   width: 75%;
-  gap: 10%;
+  gap: 5%;
   padding: 2%;
   margin: auto;
   border-radius:12px;
@@ -737,7 +736,56 @@ background-color: #FF9900;
 
 
 
-  background: url('../image/adoptive-support-photo-line.png');
+  background: url('../image/adoptive-spet-1.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.second-section-photo-obj:nth-child(2){
+background: url('../image/adoptive-step-2.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.second-section-photo-obj:nth-child(3){
+   
+  background: url('../image/adoptive-step-3.jpg');
+   background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.second-section-photo-obj:nth-child(4){
+  background: url('../image/adoptive-step-4.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+.second-section-photo-line:last-child
+.second-section-photo-obj:nth-child(1){
+  background: url('../image/adoptive-step-5.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.second-section-photo-line:last-child
+.second-section-photo-obj:nth-child(2){
+  background: url('../image/adoptive-step-6.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.second-section-photo-line:last-child
+.second-section-photo-obj:nth-child(3){
+  background: url('../image/adoptive-step-7.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.second-section-photo-line:last-child
+.second-section-photo-obj:nth-child(4){
+  background: url('../image/adoptive-step-8.jpg');
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center;
@@ -871,7 +919,10 @@ height: 205px;
 border-top-right-radius: 80px;
 border-bottom-right-radius: 80px;
 border-bottom-left-radius: 80px;
-
+background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: local;
 }
 .tree-section-main-block{
   display: flex;
