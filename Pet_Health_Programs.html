@@ -6,6 +6,8 @@
 
     <title>Pet Health Programs</title>
     <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Pet_Health_Programs.css">
     <link rel="icon" type="image/png" sizes="16x16" href="image/small_lapka.png">
     <meta name="msapplication-TileImage" content="image/small_lapka.png">
@@ -15,7 +17,7 @@
 
 <body>
     
-<header>
+    <header class="header-main">
 
         <div class="logo">
             <img class="img_logo" src="image/logo_black.png" alt="Our Logotip">
@@ -35,10 +37,55 @@
 
         
 
-        <a href="contact_us.html" class="Contact_button">Contact Us</a>
+        <button class="Contact_button"><a href="contact_us.html">Contact Us</a></button>
 
 
-</header>
+    </header>
+    <header class="header-mobi">
+            
+
+
+            <a class="logo" href="index.html">
+                <img class="img_logo" src="image/logo_black.png" alt="Our Logotip">
+                <span class="logo_text">Vetcare</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <img src="image/icons8-50.png" alt="icons8-50.png" class="icons8-50">
+            </button>
+
+
+
+            <ul class="dropdown-menu" id="dropdownMenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Service_Page.html">Our Service</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a class="Contact_button-mobi" href="contact_us.html">Contact Us</a></li>
+            </ul>
+            <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                const menuToggle = document.getElementById('menuToggle');
+                const dropdownMenu = document.getElementById('dropdownMenu');
+                
+                menuToggle.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Предотвращаем всплытие события
+                    dropdownMenu.classList.toggle('show');
+                    menuToggle.style.display = 'none';
+                });
+                
+                // Закрываем меню при клике вне его области
+                document.addEventListener('click', function() {
+                    dropdownMenu.classList.remove('show');
+                    menuToggle.style.display = 'block';
+                });
+                
+                // Предотвращаем закрытие меню при клике внутри него
+                dropdownMenu.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+            });
+            </script>
+    </header>
 
     <section class="first-section">
         <div>
@@ -141,6 +188,218 @@
         <h1 class="tree-monit-h1">Keep your pets happy and healthy,</h1>
         <h1 class="tree-monit-h1">Join today for expert care</h1>
         
+        <div class="carousel">
+            <div class="carousel-container">
+                <li class="carousel-item     block-plan-popular">
+                        <div class="price-block">
+                            <span class="price-block-plan-popular">Started Plan</span>
+                            <div class="price-block-plan-price">
+                                <span class="span-price">$250.00</span>
+                                <span class="span-month">/Month</span>
+                            </div>
+                            <div class="plan-description-block">
+                                <span class="plan-description">All-around care for your pet’s health and</span>
+                                <span class="plan-description">happiness.</span>
+                                <button class="Enroll-button-popular">Enroll Now</button>
+                            </div>
+                            
+                        </div>
+
+                        <ul class="funcs_plan_ul">
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan_black.png" alt="small_lapka_plan">
+                                <span class="span-func-popular  rota">Basic Care Plan</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan_black.png" alt="small_lapka_plan">
+                                <span class="span-func-popular  rota">Wellness Plus Plan</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan_black.png" alt="small_lapka_plan">
+                                <span class="span-func-popular  rota">Senior Pet Plan</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan_black.png" alt="small_lapka_plan">
+                                <span class="span-func-popular  rota">Puppy & Kitten Starter Plan</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan_black.png" alt="small_lapka_plan">
+                                <span class="span-func-popular  rota">Premium Care Plan</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan_black.png" alt="small_lapka_plan">
+                                <span class="span-func-popular  rota">Family Bundle Plan</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan_black.png" alt="small_lapka_plan">
+                                <span class="span-func-popular  rota">Custom Care Plan</span>
+                            </li>
+                            
+                            
+
+
+                        </ul>
+                </li>
+                <li class="carousel-item     li-plan">
+                        <div class="price-block">
+                            <span class="price-block-plan">Comprehensive Plan</span>
+                            <div class="price-block-plan-price">
+                                <span class="span-price">$330.00</span>
+                                <span class="span-month">/Month</span>
+                            </div>
+                            <span class="plan-description">All-around care for your pet’s health and</span>
+                            <span class="plan-description">happiness.</span>
+                            <button class="Enroll-button">Enroll Now</button>
+                        </div>
+
+                        <ul class="funcs_plan_ul">
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func  rota">Routine health check-ups</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func  rota">Core vaccinations</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func  rota">Parasite prevention</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func  rota">Nutritional advice</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func  rota">Nail trimming service</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func  rota">Basic grooming session</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func  rota">10% discount on additional services</span>
+                            </li>
+                            
+                            
+
+
+                        </ul>
+                </li>
+                <li  class="carousel-item     li-plan">
+                        <div class="price-block">
+                            <span class="price-block-plan">Essential Care Plan</span>
+                            <div class="price-block-plan-price">
+                                <span class="span-price">$330.00</span>
+                                <span class="span-month">/Month</span>
+                            </div>
+                            <span class="plan-description">All-around care for your pet’s health and</span>
+                            <span class="plan-description">happiness.</span>
+                            <button class="Enroll-button">Enroll Now</button>
+                        </div>
+                        <ul class="funcs_plan_ul">
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func rota">Unlimited health check-ups</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func rota">Emergency care coverage</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func rota">Advanced Wellness Plan</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func rota">Parasite prevention and treatment</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func rota">Personalized diet plan</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func rota">Emergency Care Plan</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func rota">All-Inclusive Premium Plan</span>
+                            </li>
+                            
+                        
+
+                        </ul>
+                </li>
+                <li  class="carousel-item     li-plan">
+                        <div class="price-block">
+                            <span class="price-block-plan">Premium Health Plan</span>
+                            <div class="price-block-plan-price">
+                                <span class="span-price">$377.00</span>
+                                <span class="span-month">/Month</span>
+                            </div>
+                            <span class="plan-description">The ultimate plan for complete peace of </span>
+                            <span class="plan-description">mind.</span>
+                            <button class="Enroll-button">Enroll Now</button>
+                        </div>
+                        <ul class="funcs_plan_ul">
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func rota">Annual full-body health screening</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func rota">Advanced vaccinations (with boosters)</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func rota">Dental care consultation</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func rota">Weight management program</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func rota">Priority access to grooming services</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func rota">Behavioral consultations</span>
+                            </li>
+                            <li class="funcs_plan_ul_li">
+                                <img class="small_lapka_plan_img" src="image/small_lapka_plan.png" alt="small_lapka_plan">
+                                <span class="span-func rota">20% discount on pet products</span>
+                            </li>
+                            
+                            
+
+
+                        </ul>
+                </li>
+                
+            </div>
+            <button class="carousel-prev">←</button>
+            <button class="carousel-next">→</button>
+            <script>
+                            const container = document.querySelector('.carousel-container');
+            const prevBtn = document.querySelector('.carousel-prev');
+            const nextBtn = document.querySelector('.carousel-next');
+            let currentIndex = 0;
+
+            nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % 4; // 3 — кол-во элементов
+            container.style.transform = `translateX(-${currentIndex * 100}%)`;
+            });
+
+            prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + 4) % 4;
+            container.style.transform = `translateX(-${currentIndex * 100}%)`;
+            });
+            </script>
+        </div>
+
         <div class="plan">
             <div class="plan-ul-total">
                 <div class="Most_Popular-span">Most Popular</div>
@@ -401,81 +660,86 @@
                 <span class="eight-small-text-span">Please contact whenever you want and need. Anything for your happiness and your pet.</span>
 
             </div>
-            <a href="Pet_Health_Programs.html" class="Get">Get Started</a>
+            <a href="Pet_Health_Programs.html" class="Get-star">Get Started</a>
         </div>
         
 
     </section>
     </body>
-    <footer class="main-footer">
-    
-    <div class="footer-text">
-        <div class="footer-text-special">
+   <footer class="footer">
 
-        
-            <div class="footer-text-div">
-                <ul class="footer-our-messangers-matrix">
-
-                            <li>
-
-                                <ul class="footer-our-messangers-matrix-ul">
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
-                                </ul>
-                                
-
-                            </li>
-                            <li>
+    <div class="footer-main-element">
+        <div class="custom-background-section">
+                <div class="background-image footer-logo-img"></div>
+                <div class="background-image big-lapka-div"></div>
+                <div class="background-image big-lapka-small"></div>
+                <div class="background-image big-lapka-small-second"></div>
+        </div>
+        <div>
+            <div class="footer-main-block">
+                <div class="footer-special-element">
+                    <div class="footer-text-div">
+                        <ul class="footer-our-messangers-matrix">
+                        <li>
 
                                 <ul class="footer-our-messangers-matrix-ul">
                                     <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
                                     <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
                                     <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
                                     <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry</a></li>
+                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry Insight</a></li>
                                     <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
                                     <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
-                                </ul>
-                                
+                                                        </ul>
+                                                        
 
-                            </li>
-                            <li>
+                        </li>
+                        <li>
 
-                                <ul class="footer-our-messangers-matrix-ul">
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
-                                </ul>
-                                
+                                                        <ul class="footer-our-messangers-matrix-ul">
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry Insight</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
+                                                        </ul>
+                                                        
 
-                            </li>
-                            <li>
+                        </li>
+                        <li>
 
-                                <ul class="footer-our-messangers-matrix-ul">
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
-                                </ul>
-                                
+                                                        <ul class="footer-our-messangers-matrix-ul">
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry Insight</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
+                                                        </ul>
+                                                        
 
-                            </li>
+                        </li>
+                        <li>
 
-                </ul>
+                                                        <ul class="footer-our-messangers-matrix-ul">
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry Insight</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
+                                                            <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
+                                                        </ul>
+                                                        
+
+                        </li>
+                        </ul>
+                    </div>      
+                </div>
             </div>
-            
             <div class="footer-icons">
                 <div class="footer-icons-text">
                     <span class="footer-icons-text-span">2024 Vetcare, All right reserved</span>
@@ -487,10 +751,14 @@
                         <li class="footer-icons-img-link-ul-li"><a href="https://www.Net.com/"><img src="image/footer-Browser-img.png" alt="footer-Browser-img"></a></li>
                         <li class="footer-icons-img-link-ul-li"><a href="https://www.In.com/"><img src="image/footer-In-img.png" alt="footer-In-img"></a></li>
                     </ul>
-                </div>
+                </div> 
+                                                    
             </div>
         </div>
-    </div>    
+        
+        
+    </div>
 
-    </footer>
+
+</footer>
 </html>

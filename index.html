@@ -188,6 +188,86 @@
             </div>
 
         </div>
+        <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+    <img src="image/icons8-вверх-64.png" alt="Up" class="progress-icon"/>
+</div> 
+<style>
+.progress-wrap {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.2s linear;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white; /* Фон для круга */
+}
+
+.progress-wrap.active-progress {
+    opacity: 0.8;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.progress-circle path {
+    stroke: #000; /* Цвет линии прогресса */
+    stroke-width: 4; /* Толщина линии */
+    fill: none; /* Убедитесь, что заливка отключена */
+}
+
+.progress-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    pointer-events: none; /* Чтобы клики проходили сквозь иконку */
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const progressWrap = document.querySelector('.progress-wrap');
+    const progressPath = document.querySelector('.progress-circle path');
+    const pathLength = progressPath.getTotalLength();
+    
+    progressPath.style.strokeDasharray = pathLength;
+    progressPath.style.strokeDashoffset = pathLength;
+    
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY || window.pageYOffset;
+        const windowHeight = window.innerHeight;
+        const docHeight = document.documentElement.scrollHeight;
+        const scrollPercent = scrollY / (docHeight - windowHeight);
+        const offset = pathLength - (scrollPercent * pathLength);
+        
+        progressPath.style.strokeDashoffset = offset;
+        
+        if (scrollY > 100) {
+            progressWrap.classList.add('active-progress');
+        } else {
+            progressWrap.classList.remove('active-progress');
+        }
+    });
+    
+    progressWrap.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
 
     </section>
 

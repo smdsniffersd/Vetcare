@@ -3,34 +3,82 @@
 
 <head>
     <title>Our Service</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Service_Page.css">
     <link rel="icon" type="image/png" sizes="16x16" href="image/small_lapka.png">
     <meta name="msapplication-TileImage" content="image/small_lapka.png">
 </head>
 <body>
     
-    <header>
+    <header class="header-main">
 
-            <div class="logo">
-                <img class="img_logo" src="image/logo_black.png" alt="Our Logotip">
-                <span class="logo_text">Vetcare</span>
-            </div>
-            
-            <nav class="header_nav">
+        <div class="logo">
+            <img class="img_logo" src="image/logo_black.png" alt="Our Logotip">
+            <span class="logo_text">Vetcare</span>
+        </div>
         
-                <ul class="header_nav_ul">
-                    <li><a href="homepage.html">Home</a></li>
+        <nav class="header_nav">
+    
+            <ul class="header_nav_ul">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="Service_Page.html">Our Service</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+            </ul>
+
+        </nav>
+        
+
+        
+
+        <button class="Contact_button">Contact Us</button>
+
+
+    </header>
+    <header class="header-mobi">
+        
+
+
+        <a class="logo" href="index.html">
+            <img class="img_logo" src="image/logo_black.png" alt="Our Logotip">
+            <span class="logo_text">Vetcare</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle">
+            <img src="image/icons8-50.png" alt="icons8-50.png" class="icons8-50">
+        </button>
+
+
+
+        <ul class="dropdown-menu" id="dropdownMenu">
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="Service_Page.html">Our Service</a></li>
                     <li><a href="about_us.html">About Us</a></li>
-                </ul>
-
-            </nav>
+                    <li><a class="Contact_button-mobi" href="contact_us.html">Contact Us</a></li>
+        </ul>
+        <script>
+                document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const dropdownMenu = document.getElementById('dropdownMenu');
             
-
-            <a href="contact_us.html" class="Contact_button">Contact Us</a>
-
-
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation(); // Предотвращаем всплытие события
+                dropdownMenu.classList.toggle('show');
+                menuToggle.style.display = 'none';
+            });
+            
+            // Закрываем меню при клике вне его области
+            document.addEventListener('click', function() {
+                dropdownMenu.classList.remove('show');
+                menuToggle.style.display = 'block';
+            });
+            
+            // Предотвращаем закрытие меню при клике внутри него
+            dropdownMenu.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+        </script>
     </header>
     <main>
         <div class="Pet-text">
@@ -97,6 +145,7 @@
             </div>
                 </div>
         <div class="Pet-service-ul_and-img">
+            <img class="pet-service-img pet-service-img-mobi" src="image/australian-cattle-dog-puppy-outdoor-blue-and-red-2.png" alt="pet-service-img">
             <ul class="Services-ul">
                 <li>
                     <span class="Services-Big-span-ul">Comprehensive Services</span>
@@ -115,6 +164,7 @@
     <section class="our_service">
 
         <div class="our_service-main-element">
+            <span class="our_service-BIG-span">Our Service</span>
             <div class="photo-get">
                 <div>
                     <div>
@@ -140,18 +190,18 @@
                             </div>
                         </div>
                     </li>
-                    <li class="li-special">
-                        <img src="image/service-our-service-ul-img.png" alt="service-our-service-ul-img" class="service-our-service-ul-img">
+                    <li>
+                        <img src="image/service-our-service-ul-2-img.png" alt="service-our-service-ul-img" class="service-our-service-ul-img">
                         <div class="our_service-text-div">
-                            <span class="our_service-ul-BIG-span-special">Grooming Services</span>
+                            <span class="our_service-ul-BIG-span">Grooming Services</span>
                             <div>
-                                <span class="our_service-descr-span-special">Nail trimming</span>
-                                <span class="our_service-descr-span-special">Ear cleaning</span>
+                                <span class="our_service-descr-span">Nail trimming</span>
+                                <span class="our_service-descr-span">Ear cleaning</span>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <img src="image/service-our-service-ul-img.png" alt="service-our-service-ul-img" class="service-our-service-ul-img">
+                        <img src="image/service-our-service-ul-3-img.png" alt="service-our-service-ul-img" class="service-our-service-ul-img">
                         <div class="our_service-text-div">
                             <span class="our_service-ul-BIG-span">Veterinary Support</span>
                             <div>
@@ -161,7 +211,7 @@
                         </div>
                     </li>
                     <li>
-                        <img src="image/service-our-service-ul-img.png" alt="service-our-service-ul-img" class="service-our-service-ul-img">
+                        <img src="image/service-our-service-ul-4-img.png" alt="service-our-service-ul-img" class="service-our-service-ul-img">
                         <div class="our_service-text-div">
                             <span class="our_service-ul-BIG-span">Pet Adoption Assistance</span>
                             <div>
@@ -171,7 +221,7 @@
                         </div>
                     </li>
                     <li>
-                        <img src="image/service-our-service-ul-img.png" alt="service-our-service-ul-img" class="service-our-service-ul-img">
+                        <img src="image/service-our-service-ul-5-img.png" alt="service-our-service-ul-img" class="service-our-service-ul-img">
                         <div class="our_service-text-div">
                             <span class="our_service-ul-BIG-span">Pet Boarding & Daycare</span>
                             <div>
@@ -256,97 +306,106 @@
                 <span class="eight-small-text-span">Please contact whenever you want and need. Anything for your happiness and your pet.</span>
 
             </div>
-            <button class="eigth-button">Get Started</button>
+            <a href="Pet_Health_Programs.html" class="Get">Get Started</a>
         </div>
         
 
     </section>
-</body>
-<footer class="main-footer">
-    
-    <div class="footer-text">
-        <div class="footer-text-special">
+    <footer class="footer">
 
-        
-            <div class="footer-text-div">
-                <ul class="footer-our-messangers-matrix">
-
+        <div class="footer-main-element">
+            <div class="custom-background-section">
+                    <div class="background-image footer-logo-img"></div>
+                    <div class="background-image big-lapka-div"></div>
+                    <div class="background-image big-lapka-small"></div>
+                    <div class="background-image big-lapka-small-second"></div>
+            </div>
+            <div>
+                <div class="footer-main-block">
+                    <div class="footer-special-element">
+                        <div class="footer-text-div">
+                            <ul class="footer-our-messangers-matrix">
                             <li>
 
-                                <ul class="footer-our-messangers-matrix-ul">
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
-                                </ul>
-                                
+                                    <ul class="footer-our-messangers-matrix-ul">
+                                        <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
+                                        <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
+                                        <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
+                                        <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
+                                        <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry Insight</a></li>
+                                        <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
+                                        <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
+                                                            </ul>
+                                                            
 
                             </li>
                             <li>
 
-                                <ul class="footer-our-messangers-matrix-ul">
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
-                                </ul>
-                                
+                                                            <ul class="footer-our-messangers-matrix-ul">
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry Insight</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
+                                                            </ul>
+                                                            
 
                             </li>
                             <li>
 
-                                <ul class="footer-our-messangers-matrix-ul">
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
-                                </ul>
-                                
+                                                            <ul class="footer-our-messangers-matrix-ul">
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry Insight</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
+                                                            </ul>
+                                                            
 
                             </li>
                             <li>
 
-                                <ul class="footer-our-messangers-matrix-ul">
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
-                                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
-                                </ul>
-                                
+                                                            <ul class="footer-our-messangers-matrix-ul">
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry Insight</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
+                                                            </ul>
+                                                            
 
                             </li>
-
-                </ul>
+                            </ul>
+                        </div>      
+                    </div>
+                </div>
+                <div class="footer-icons">
+                    <div class="footer-icons-text">
+                        <span class="footer-icons-text-span">2024 Vetcare, All right reserved</span>
+                    </div>
+                    <div class="footer-icons-img-link">
+                        <ul  class="footer-icons-img-link-ul">
+                            <li class="footer-icons-img-link-ul-li"><a href="https://www.instagram.com/"><img src="image/footer-insta-img.png" alt="footer-insta-img"></a></li>
+                            <li class="footer-icons-img-link-ul-li"><a href="https://www.Be.com/"><img src="image/footer-Be-img.png" alt="footer-Be-img"></a></li>
+                            <li class="footer-icons-img-link-ul-li"><a href="https://www.Net.com/"><img src="image/footer-Browser-img.png" alt="footer-Browser-img"></a></li>
+                            <li class="footer-icons-img-link-ul-li"><a href="https://www.In.com/"><img src="image/footer-In-img.png" alt="footer-In-img"></a></li>
+                        </ul>
+                    </div> 
+                                                        
+                </div>
             </div>
             
-            <div class="footer-icons">
-                <div class="footer-icons-text">
-                    <span class="footer-icons-text-span">2024 Vetcare, All right reserved</span>
-                </div>
-                <div class="footer-icons-img-link">
-                    <ul  class="footer-icons-img-link-ul">
-                        <li class="footer-icons-img-link-ul-li"><a href="https://www.instagram.com/"><img src="image/footer-insta-img.png" alt="footer-insta-img"></a></li>
-                        <li class="footer-icons-img-link-ul-li"><a href="https://www.Be.com/"><img src="image/footer-Be-img.png" alt="footer-Be-img"></a></li>
-                        <li class="footer-icons-img-link-ul-li"><a href="https://www.Net.com/"><img src="image/footer-Browser-img.png" alt="footer-Browser-img"></a></li>
-                        <li class="footer-icons-img-link-ul-li"><a href="https://www.In.com/"><img src="image/footer-In-img.png" alt="footer-In-img"></a></li>
-                    </ul>
-                </div>
-            </div>
+            
         </div>
-    </div>    
 
-</footer>
+
+    </footer>
+    </body>
 
 </html>

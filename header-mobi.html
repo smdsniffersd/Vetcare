@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="header-mobi-style.css">
+</head>
+<body>
+    
+<header class="header-mobi">
+
+
+    <a class="logo" href="index.html">
+            <img class="img_logo" src="image/logo.png" alt="Our Logotip">
+            <span class="logo_text">Vetcare</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">
+        <img src="image/icons8-50.png" alt="icons8-50.png">
+    </button>
+
+    
+    <ul class="dropdown-menu" id="dropdownMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Service_Page.html">Our Service</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a class="Contact_button" href="contact_us.html">Contact Us</a></li>
+    </ul>
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation(); // Предотвращаем всплытие события
+            dropdownMenu.classList.toggle('show');
+            menuToggle.style.display = 'none';
+        });
+        
+        // Закрываем меню при клике вне его области
+        document.addEventListener('click', function() {
+            dropdownMenu.classList.remove('show');
+            menuToggle.style.display = 'block';
+        });
+        
+        // Предотвращаем закрытие меню при клике внутри него
+        dropdownMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    });
+    </script>
+
+</header>
+    
+</body>
+</html>

@@ -6,7 +6,8 @@
 <head>
     
     <title>Pet Health Tracker</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Pet Health Tracker.css">
     <link rel="icon" type="image/png" sizes="16x16" href="image/small_lapka.png">
     <meta name="msapplication-TileImage" content="image/small_lapka.png">
@@ -17,28 +18,32 @@
 
 <body>
 
-    <header>
+    <header class="header-main">
 
-            <div class="logo">
-                <img class="img_logo" src="image/logo.png" alt="Our Logotip">
-                <span class="logo_text">Vetcare</span>
-            </div>
-            
-            <nav class="header_nav">
+        <div class="logo">
+            <img class="img_logo" src="image/logo_black.png" alt="Our Logotip">
+            <span class="logo_text">Vetcare</span>
+        </div>
         
-                <ul class="header_nav_ul">
-                    <li><a href="homepage.html">Home</a></li>
-                    <li><a href="our_service.html">Our Service</a></li>
-                    <li><a href="about_us.html">About Us</a></li>
-                </ul>
+        <nav class="header_nav">
+    
+            <ul class="header_nav_ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Service_Page.html">Our Service</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+            </ul>
 
-            </nav>
-            
+        </nav>
+        
 
-            <button class="Contact_button">Contact Us</button>
+        
+
+        <button class="Contact_button"><a href="contact_us.html">Contact Us</a></button>
 
 
     </header>
+    <header class="header-mobi">
+        </header>
     <main>
         <div class="Pet-text">
 
@@ -177,13 +182,16 @@
 
                             <span class="task-planer-Schedule-span">Schedule</span>
                             <span class="task-planer-date-span">01 Dec, 2024</span>
-                            <button class="Pet-calendar-arrow-left-dec"></button>
-                            <button class="Pet-calendar-arrow-right-dec"></button>
+                            <div>
+                                <button class="Pet-calendar-arrow-left-dec"></button>
+                                <button class="Pet-calendar-arrow-right-dec"></button>
+                            </div>
+                            
                             
                         </div>
-                        <div class="task">
-                            <ul class="task-ul">
-                                <li class="task-li-element">
+                        <div class="task carousel">
+                            <ul class="task-ul carousel-container">
+                                <li class="task-li-element carousel-item">
                                     <div class="task-li-element-div">
                                         <span class="task-name-span">Vaccination Tracker</span>
                                         <span class="task-time-span">8:00 AM - 12:00 AM</span>
@@ -191,7 +199,7 @@
                                     </div>
                                     
                                 </li>
-                                <li class="task-li-element">
+                                <li class="task-li-element carousel-item">
                                     <div class="task-li-element-div">
                                         <span class="task-name-span">Vaccination Tracker</span>
                                         <span class="task-time-span">8:00 AM - 12:00 AM</span>
@@ -199,7 +207,7 @@
                                     </div>
                                     
                                 </li>
-                                <li class="task-li-element">
+                                <li class="task-li-element carousel-item">
 
                                     <div class="task-li-element-div">
                                         <span class="task-name-span">Vaccination Tracker</span>
@@ -219,8 +227,9 @@
                     <div class="h1-BIG-calendar-header">
                         <div class="h1-BIG-calendar-and-button">
                             <span class="h1-BIG-calendar-span">December 2024</span>
-                            <button class="h1-BIG-calendar-button-left"></button>
-                            <button class="h1-BIG-calendar-button-right"></button>
+                                <button class="h1-BIG-calendar-button-left"></button>
+                                <button class="h1-BIG-calendar-button-right"></button>
+                            
                         </div>
                         <div class="eighth-section-search">
                             <img src="image/eighth-section-search.png" alt="eighth-section-search"  class="eighth-section-search-img">
@@ -229,7 +238,7 @@
                         </div>
                     </div>
                     
-                    <div class="BIG-calendar-main">
+                    <div class="BIG-calendar-main main-big-calendar">
 
                         <table>
                             <thead>
@@ -360,6 +369,253 @@
                         </table>
 
                     </div>
+                    <div class="BIG-calendar-main mobi-big-calendar">
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>GMT-8</th>
+                                    <th>MON 1</th>
+                                    <th>MON 2</th>
+                                    <th>MON 3</th>
+                                    <th>MON 4</th>
+                                </tr>
+                                
+                                
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="6">
+                                        <div class="td-time">
+                                            <span class="td-row-GMT">09.00 AM</span>
+                                            <span class="td-row-GMT-s">10.00 AM</span>
+                                            <span class="td-row-GMT">11.00 AM</span>
+                                            <span class="td-row-GMT">12.00 AM</span>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <div class="td-element">
+                                            <span class="td-element-span">Health Check-Up</span>
+                                            <span class="td-element-span">08 AM - 09 AM</span>
+    
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                    <td>
+
+                                        <div class="td-element">
+                                            <span class="td-element-span">Health Check-Up</span>
+                                            <span class="td-element-span">08 AM - 09 AM</span>
+    
+                                        </div>
+
+
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="td-element">
+                                            <span class="td-element-span">Vaccination Tracker</span>
+                                            <span class="td-element-span">09 AM - 10 AM</span>
+
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                    <td>
+
+                                        <div class="td-element">
+                                            <span class="td-element-span">Vaccination Tracker</span>
+                                            <span class="td-element-span">09 AM - 10 AM</span>
+
+                                        </div>
+
+                                    </td>
+                                    <td></td>
+
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+
+                                        <div class="td-element">
+                                            <span class="td-element-span">Vaccination Tracker</span>
+                                            <span class="td-element-span">08 AM - 09 AM</span>
+
+                                        </div>
+
+                                    </td>
+                                    <td>
+
+                                        <div class="td-element">
+                                            <span class="td-element-span">Grooming</span>
+                                            <span class="td-element-span">08 AM - 09 AM</span>
+
+                                        </div>
+
+                                        
+                                    </td>
+                                    <td></td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+
+                                        <div class="td-element">
+                                            <span class="td-element-span">Vaccination Tracker</span>
+                                            <span class="td-element-span">09 AM - 10 AM</span>
+
+                                        </div>
+
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <div class="td-element">
+                                        <span class="td-element-span">Vaccination Tracker</span>
+                                        <span class="td-element-span">09 AM - 10 AM</span>
+
+                                    </div>
+                                    </td>
+                                    <td>
+                                        <div class="td-element">
+                                        <span class="td-element-span">Vaccination Tracker</span>
+                                        <span class="td-element-span">09 AM - 10 AM</span>
+
+                                    </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="mobile-schedule-accordion">
+
+    <div class="accordion-day">
+    <button class="accordion-button" onclick="toggleAccordion(this)">
+      <span>GMT-8</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="accordion-content">
+      <div class="time-card">
+        <span class="time">09:00 AM</span>
+      </div>
+      <div class="time-card">
+        <span class="time">10:00 AM</span>
+      </div>
+      <div class="time-card">
+        <span class="time">11:00 AM</span>
+      </div>
+      <div class="time-card">
+        <span class="time">12:00 AM</span>
+      </div>
+      <!-- Другие записи для MON 1 -->
+    </div>
+  </div>
+  <!-- MON 1 -->
+   <div>
+        <div class="accordion-day">
+            <button class="accordion-button" onclick="toggleAccordion(this)">
+            <span>MON 1</span>
+            <span class="arrow">▼</span>
+            </button>
+            <div class="accordion-content">
+            <div class="time-card">
+                <span class="time">09:00 - 10:00 AM</span>
+                <span class="procedure">Vaccination Tracker</span>
+            </div>
+            <!-- Другие записи для MON 1 -->
+            </div>
+        </div>
+        <div class="accordion-day">
+            <button class="accordion-button" onclick="toggleAccordion(this)">
+            <span>MON 2</span>
+            <span class="arrow">▼</span>
+            </button>
+            <div class="accordion-content">
+            <div class="time-card">
+                <span class="time">08:00 - 09:00 AM</span>
+                <span class="procedure">Health Check-Up</span>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+
+
+
+    
+
+
+  
+
+  <!-- MON 2 -->
+  
+
+  <!-- MON 3 -->
+  <div class="accordion-day">
+    <button class="accordion-button" onclick="toggleAccordion(this)">
+      <span>MON 3</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="accordion-content">
+      <div class="time-card">
+        <span class="time">08:00 - 09:00 AM</span>
+        <span class="procedure">Grooming</span>
+      </div>
+      <div class="time-card">
+        <span class="time">09:00 - 10:00 AM</span>
+        <span class="procedure">Vaccination Tracker</span>
+      </div>
+      <!-- Другие записи для MON 3 -->
+    </div>
+  </div>
+
+  <!-- MON 4 -->
+  <div class="accordion-day">
+    <button class="accordion-button" onclick="toggleAccordion(this)">
+      <span>MON 4</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="accordion-content">
+      <div class="time-card">
+        <span class="time">08:00 - 09:00 AM</span>
+        <span class="procedure">Health Check-Up</span>
+      </div>
+      <div class="time-card">
+        <span class="time">09:00 - 10:00 AM</span>
+        <span class="procedure">Vaccination Tracker</span>
+      </div>
+      <!-- Другие записи для MON 4 -->
+    </div>
+  </div>
+  </div>
+</div>
+
+
+<script>
+  function toggleAccordion(button) {
+    const dayBlock = button.parentElement;
+    const content = dayBlock.querySelector('.accordion-content');
+    
+    button.classList.toggle('active');
+    content.classList.toggle('active');
+  }
+</script>
+
                 </div>
             </div>
         </div>
@@ -385,80 +641,101 @@
     
 
     </section>
-</body>
-<footer class="main-footer">
-    <div class="lapka_imge">
-        <img class="footer-main-small-lapka"   src="image/footer-main-small-lapka.png" alt="footer-main-small-lapka">
-        <img class="footer-main-medium-lapka"   src="image/footer-main-medium-lapka.png" alt="footer-main-medium-lapka">
-        
-        <img class="footer-main-big-lapka"   src="image/footer-main-big-lapka.png" alt="footer-main-big-lapka">
+    <footer class="footer">
 
-    </div>
-    
-    <div class="footer-text">
-        <img class="logo-footer"   src="image/logo-footer.png" alt="logo-footer">
-        <ul class="footer-our-messangers-matrix">
+        <div class="footer-main-element">
+            <div class="custom-background-section">
+                    <div class="background-image footer-logo-img"></div>
+                    <div class="background-image big-lapka-div"></div>
+                    <div class="background-image big-lapka-small"></div>
+                    <div class="background-image big-lapka-small-second"></div>
+            </div>
+            <div>
+                <div class="footer-main-block">
+                    <div class="footer-special-element">
+                        <div class="footer-text-div">
+                            <ul class="footer-our-messangers-matrix">
+                            <li>
 
-            <li>
+                                    <ul class="footer-our-messangers-matrix-ul">
+                                        <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
+                                        <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
+                                        <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
+                                        <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
+                                        <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry Insight</a></li>
+                                        <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
+                                        <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
+                                                            </ul>
+                                                            
 
-                <ul class="footer-our-messangers-matrix-ul">
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
-                </ul>
-                
+                            </li>
+                            <li>
 
-            </li>
-            <li>
+                                                            <ul class="footer-our-messangers-matrix-ul">
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry Insight</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
+                                                            </ul>
+                                                            
 
-                <ul class="footer-our-messangers-matrix-ul">
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
-                </ul>
-                
+                            </li>
+                            <li>
 
-            </li>
-            <li>
+                                                            <ul class="footer-our-messangers-matrix-ul">
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry Insight</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
+                                                            </ul>
+                                                            
 
-                <ul class="footer-our-messangers-matrix-ul">
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
-                </ul>
-                
+                            </li>
+                            <li>
 
-            </li>
-            <li>
+                                                            <ul class="footer-our-messangers-matrix-ul">
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry Insight</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
+                                                                <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
+                                                            </ul>
+                                                            
 
-                <ul class="footer-our-messangers-matrix-ul">
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Features</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">About Us</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Service</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Pricing</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Industry</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Our Team</a></li>
-                    <li class="footer-our-messangers-matrix-ul-li"><a class="footer-our-messangers-matrix-ul-li-a"href="">Testimonials</a></li>
-                </ul>
-                
+                            </li>
+                            </ul>
+                        </div>      
+                    </div>
+                </div>
+                <div class="footer-icons">
+                    <div class="footer-icons-text">
+                        <span class="footer-icons-text-span">2024 Vetcare, All right reserved</span>
+                    </div>
+                    <div class="footer-icons-img-link">
+                        <ul  class="footer-icons-img-link-ul">
+                            <li class="footer-icons-img-link-ul-li"><a href="https://www.instagram.com/"><img src="image/footer-insta-img.png" alt="footer-insta-img"></a></li>
+                            <li class="footer-icons-img-link-ul-li"><a href="https://www.Be.com/"><img src="image/footer-Be-img.png" alt="footer-Be-img"></a></li>
+                            <li class="footer-icons-img-link-ul-li"><a href="https://www.Net.com/"><img src="image/footer-Browser-img.png" alt="footer-Browser-img"></a></li>
+                            <li class="footer-icons-img-link-ul-li"><a href="https://www.In.com/"><img src="image/footer-In-img.png" alt="footer-In-img"></a></li>
+                        </ul>
+                    </div> 
+                                                        
+                </div>
+            </div>
+            
+            
+        </div>
 
-            </li>
-
-        </ul>
-
-    </div>    
 
     </footer>
+</body>
+
 </html>
