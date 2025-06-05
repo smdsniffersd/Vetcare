@@ -1362,7 +1362,9 @@ display: block;
 .eighth-section-photo-m{
     display: none;
 }
-
+.header-mobi{
+    display: none;
+}
 @media (max-width: 768px) {
     .first-section-BIG-text-span{
         font-size: 30px;
@@ -1375,6 +1377,7 @@ display: block;
     .first-section-BIG-text{
         width: 100%;
         margin: auto;
+        margin-bottom: 5vh;
     }
     .button_class{
         width: 90%;
@@ -1382,10 +1385,10 @@ display: block;
         margin-right: 7%;
     }
     .button_class a {
-    display: block; /* Makes each <a> a block element, stacking them vertically */
-    width: 90%; /* Optional: Ensures each button takes full width */
-    text-align: center; /* Centers the text within each button */
-    margin-bottom: 10px; /* Adds space between the buttons */
+    display: block;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 10px;
     }
     .Get {
         margin: 0% !important;
@@ -1395,6 +1398,7 @@ display: block;
     }
     .underline-img{
         margin: 3% 5% !important;
+        margin-top: 15vh !important;
     }
     .second-section-content{
         width: 100% !important;
@@ -1419,6 +1423,7 @@ display: block;
     .second-section-text-BIG-text{
         display: block;
         width: 100%;
+        margin-left: 0%;
     }
     .second-section-text{
         width: 100%;
@@ -1484,6 +1489,7 @@ display: block;
     margin: 0%;
 }
 .statistic-ul{
+    margin-top: 5vh;
     gap: 15%;
 }
 .second-monit-2{
@@ -1516,6 +1522,7 @@ display: block;
     padding: 3% 0;
 }
 .third-section{
+    height: 40vh !important;
     padding: 5% 0;
 }
 .fly-text-second {
@@ -1924,10 +1931,6 @@ ul.ninth-section-ul-li-ul li.ninth-section-ul-li-ul-li img {
 }
 .big-lapka-div{
     display: none;
-    /* width: 180px;
-    height: 180px;
-    top: 80%;
-    transform: rotateX(25 deg) !important; */
 }
 .footer-icons{
     display: block;
@@ -1950,6 +1953,7 @@ ul.ninth-section-ul-li-ul li.ninth-section-ul-li-ul-li img {
     float: left;
     height: 50vh !important;
     margin-left: 5vh;
+    width: 50% !important;
 }
 .footer-icons-img-link{
     margin: 0% !important;
@@ -1975,4 +1979,103 @@ ul.ninth-section-ul-li-ul li.ninth-section-ul-li-ul-li img {
     left: 5vh;
 }
 
+/* LOGO*/
+.header-mobi{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.img_logo {
+    width: 80px;
+    height: 80px;
+}
+.header-mobi > button {
+    width: 7.3vh;
+    height: 7.3vh;
+    border: 1px solid black;
+    margin: 3%;
+}
+.header-mobi > button > image {
+    width: 6vh;
+    height: 6vh;
+}
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border-radius: 12px;
+}
+.icons8-50{
+    width: 45px;
+    height: 45px;
+}
+.dot {
+    width: 4px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 50%;
+}
+.dropdown-menu {
+    position: absolute;
+    top: -15px;
+    right: 0px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px 0;
+    display: none;
+    min-width: 40%;
+    height: 100%;
+    z-index: 1000;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.dropdown-menu > li {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: bold;
+    font-size: 2vh;
+    padding-top: 8px;
+    margin: 5vh 0;
+    margin-left: 2vh;
+}
+.dropdown-menu a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #808080;
+}
+.dropdown-menu a:hover {
+    background-color: #f5f5f5;
+}
+.dropdown-menu.show {
+    display: block;
+}
+.logo_text {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    padding-top: 8px;
+    margin-top: 15%;
+}
+.header-mobi{
+    display: flex;
+    justify-content: space-between;
+}
+.header-main{
+    display: none;
+}
+.hesh-tag{
+    margin-bottom: 5vh;
+}
+.first-section{
+    height: 50vh;
+}
 }

@@ -7,7 +7,6 @@ body {
     color: var(--black);
     background-color: var(--white);
     height: 100%;
-    min-width: 1440px;
 }
 span {
     font-family: 'Inter Tight';
@@ -17,7 +16,7 @@ header {
     display: flex;
     width: 90%;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 10px !important;
     background-color: rgb(255, 255, 255);
 }
 .header_nav_ul {
@@ -134,33 +133,26 @@ main {
     padding: 4px 12px;
     width: 45% !important;
 }
-.button_class .Book {
-    background-color: #FF9900;
-    border: 0px;
-    color: white;
+
+
+.Book, 
+.Get {
+    background-color: rgb(255, 255, 255) !important;
+    color: black !important;
     border-radius: 25px;
     font-size: 16px;
     padding: 12px 24px 12px 24px;
-    margin-top: 30px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease;
-}
-.button_class .Book:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-.button_class .Get {
-    background-color: rgb(255, 255, 255);
-    color: black;
-    border-radius: 25px;
-    font-size: 16px;
-    padding: 12px 24px 12px 24px;
-    margin: 30px 0 0 12px;
+    margin: 15px auto;
     border-width: 1px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease;
 }
-.button_class .Get:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+.Get:hover, .Book:hover {
+    background-color: #FF9900 !important;
+    border: 0px;
+    color: white !important;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .Big-text>span {
@@ -205,9 +197,9 @@ main {
     align-items: center;
     padding: 12px 0px;
     gap: 37px;
-    position: absolute;
     background: #FF9900;
-
+    overflow: auto; /* или hidden */
+    margin-top: 3.5vh; /* теперь будет работать */
 }
 .like-footer>ul>li {
     display: flex;
@@ -382,7 +374,7 @@ textarea {
     letter-spacing: 0%;
     color: #575757;
     background-color: #f5f5f5;
-    min-height: 100px;
+    min-height: 80px;
     resize: vertical;
     overflow: hidden;
     border-radius: 12px;
@@ -515,9 +507,8 @@ padding-right: 34.96px;
 padding-bottom: 13.6px;
 padding-left: 34.96px;
 }
-.calendar-ul-day-nums-2,
-.calendar-ul-day-nums-2-special{
-    font-family: Inter Tight;
+.calendar-ul-day-nums-2{
+font-family: Inter Tight;
 font-weight: 600;
 font-size: 24px;
 line-height: 32px;
@@ -536,13 +527,12 @@ padding-left: 29.13px;
     border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-.calendar-ul-day-nums-2-special{
-    border-radius: 20px;
-    padding: 15.54px 29.13px; /* горизонтальный padding как у всех */
-    margin-top: -1.94px;
-    margin-bottom: -1.94px;
+.calendar-ul-day-nums-1:hover,
+.calendar-ul-day-nums-2:hover{
     color: white;
     background-color: black;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .calendar-main-ul{
@@ -690,35 +680,6 @@ text-align: center;
     height: 45px;
 }
 
-.progress-wrap {
-  position: fixed;
-  left: 20px;
-  bottom: 20px;
-  width: 46px;
-  height: 46px;
-  cursor: pointer;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(15px);
-  transition: all 0.2s linear;
-  z-index: 10000;
-}
-
-.progress-wrap.active-progress {
-  opacity: 0.8;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.progress-circle path {
-  fill: none;
-  stroke: #000;
-  stroke-width: 4;
-  stroke-linecap: round;
-  transition: stroke-dashoffset 0.1s linear;
-}
 .calendar-footer-div>img{
     margin: auto 8px;
     width: 24px;
@@ -800,25 +761,26 @@ text-align: center;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный чёрный */
-    z-index: 1000; /* Поверх всех элементов */
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
     justify-content: center;
     align-items: center;
 }
 .eighth-monit {
     background-image: url('../image/1679878917_papik-pro-p-peizazh-landscape-1.jpg');
-    background-size: cover; /* Изображение масштабируется, чтобы покрыть всю ширину */
-    background-repeat: no-repeat; /* Изображение не повторяется */
-    background-position: center; /* Центрируем изображение */
-    width: 100%; /* Полная ширина страницы */
-    height: 1024px; /* Фиксированная высота */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 1280px;
+    margin-bottom: 3%;
 }
 
 
 
 .eighth-monit img {
-    display: block; /* Убирает пробелы под изображением */
-    width: 100%; /* Сохраняет оригинальный размер */
+    display: block;
+    width: 100%;
     height: auto;
 }
 
@@ -950,17 +912,17 @@ letter-spacing: 0%;
 
 
 .lapka_imge {
-    display: block; /* Убираем возможный flex, если он есть */
+    display: block;
 }
 .lapka_imge img {
-    display: block; /* Каждое изображение на своей строке */
-    margin-bottom: 10px; /* Добавляем отступ снизу для визуального разделения */
+    display: block;
+    margin-bottom: 10px;
 }
 .button_class {
     display: inline-flex;
     width: 50%;
     margin-top: 3% !important;
-    gap: 10px; /* Отступ между кнопками внутри */
+    gap: 10px;
 }
 
 .button_class > div {
@@ -1002,4 +964,409 @@ letter-spacing: 0%;
     padding-left: 24px;
     background: #FF9900;
     border: none;
+}
+.footer{
+    background-color: #1b1b1b;
+    width: 95%;
+    margin: auto;
+    border-radius: 24px;
+    min-height: 70vh;
+}
+.footer-our-messangers-matrix{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 15%;
+    padding: 0%;
+}
+.footer-our-messangers-matrix-ul{
+    list-style: none;
+    padding: 0%;
+}
+.footer-our-messangers-matrix-ul-li-a{
+        font-family: 'Inter Tight';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: white !important;
+    text-decoration: none;
+}
+.footer-icons{
+    display: flex;
+    width: 83% !important;
+    margin-left: 20%;
+    
+}
+.footer-icons-img-link-ul{
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    margin: 5%;
+    padding: 0%;
+}
+.footer-icons-img-link{
+    margin-left: 35% !important;
+}
+.footer-icons-img-link-ul-li>a>img{
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+}
+.footer-icons-text-span{
+    font-family: 'Inter Tight';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    
+    color: white;
+    display: inline-flex;
+    margin: auto;
+    margin-top: 10%;
+}
+.footer-our-messangers-matrix-ul-li{
+    margin: 25% 0;
+}
+.footer-our-messangers-matrix-ul-li>a{
+    white-space: nowrap;
+}
+.footer-main-element > div:last-child{
+    display: flex;
+    flex-direction: column;
+    width: 95.56%;
+    height: 80vh;
+}
+.footer-special-element{
+    width: 50%;
+    height: 45vh;
+    margin-right: 10%;
+}
+.footer-main-element > div:last-child > div {
+    width: 100%;
+}
+.footer-main-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 60vh;
+}
+
+.footer-main-element{
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+}
+
+.custom-background-section {
+    position: relative;
+    width: 50%;
+    height: 558px;
+    margin: 20px 0;
+    overflow: visible;
+}
+
+.background-image {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.big-lapka-div {
+    width: 442px;
+    height: 442px;
+    top: 41.2%;
+    left: 0px;
+    background: url('../image/footer-main-big-lapka.png') no-repeat center / contain;
+    z-index: 2;
+    border-bottom-left-radius: 24px !important;
+}
+
+.big-lapka-small {
+    width: 117px;
+    height: 117px;
+    top: 47%;
+    left: 50%;
+    background: url('../image/footer-main-medium-lapka.png') no-repeat center / contain;
+    z-index: 3;
+}
+
+.big-lapka-small-second {
+    width: 100px;
+    height: 100px;
+    top: 35%;
+    left: 15%;
+    transform: rotate(25.95 deg);
+    background: url('../image/footer-main-small-lapka.png') no-repeat center / contain;
+    z-index: 4;
+}
+.footer-logo-img{
+    width: 100px;
+    height: 32px;
+    top: 5%;
+    left: 5%;
+    background: url('../image/footer-logo-img.png') no-repeat center / contain;
+    z-index: 1;
+}
+.header-mobi{
+    display: none;
+}
+@media (max-width: 768px) {
+
+    .header-main{
+        display: none;
+    }
+     /* LOGO*/
+.header-mobi{
+  width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.img_logo {
+    width: 80px;
+    height: 80px;
+}
+.header-mobi > button {
+    width: 7.3vh;
+    height: 7.3vh;
+    border: 1px solid black;
+    margin: 3%;
+}
+.header-mobi > button > image {
+    width: 6vh;
+    height: 6vh;
+}
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border-radius: 12px;
+}
+.icons8-50{
+    width: 45px;
+    height: 45px;
+}
+.dot {
+    width: 4px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 50%;
+}
+.dropdown-menu {
+    position: absolute;
+    top: -15px;
+    right: 0px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px 0;
+    display: none;
+    min-width: 40%;
+    height: 100%;
+    z-index: 1000;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.dropdown-menu > li {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: bold;
+    font-size: 2vh;
+    padding-top: 8px;
+    margin: 5vh 0;
+    margin-left: 2vh;
+}
+.dropdown-menu a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #808080;
+}
+.dropdown-menu a:hover {
+    background-color: #f5f5f5;
+}
+.dropdown-menu.show {
+    display: block;
+}
+.logo_text {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    padding-top: 8px;
+    margin-top: 15%;
+}
+.header-mobi{
+    display: flex;
+    justify-content: space-between;
+}
+.Pet-photo{
+    display: none;
+}
+.Big-text-span{
+    width: fit-content;
+    font-size: 24px !important;
+    line-height: 24px !important;
+}
+.Big-text{
+    width: fit-content;
+}
+.like-footer-ul > li:nth-last-child(1),
+  .like-footer-ul > li:nth-last-child(2),
+  .like-footer-ul > li:nth-last-child(3),
+  .like-footer-ul > li:nth-last-child(4){
+    display: none;
+  }
+  .like-footer-ul > li {
+  font-size: 16px !important;
+  line-height: 16px !important;
+}
+.appointment-section-BIG-text-block > span {
+    font-size: 24px;
+    line-height: 24px;
+
+}
+.form-row{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+}
+.form-group > label,
+.form-group > input{
+    width: fit-content;
+    font-size: 14px !important;
+    line-height: 14px !important;
+    padding: 12px;
+}
+.form-group > label{
+    font-size: 18px !important;
+    line-height: 18px !important;
+}
+.name{
+    font-size: 16px !important;
+    line-height: 16px !important;
+}
+.app-form-group-input{
+    flex-direction: column;
+}
+.appointment-secstion{
+    padding-top: 5vh;
+    margin: 3% 0;
+}
+.form-group > textarea{
+    margin: auto;
+    width: 90%;
+    height: 2vh !important;
+    font-size: 14px !important;
+    line-height: 14px !important;
+    display: block;
+}
+.appointment-section-BIG-text-block-span{
+    font-size: 24px !important;
+    line-height: 24px !important;
+    width: fit-content;
+    font-weight: 599; 
+    text-align: center;
+    margin: 5% auto;
+}
+.appointment-section-descr-text-block-span{
+    font-size: 16px !important;
+    line-height: 16px !important;
+    width: fit-content;
+    text-align: center;
+}
+main{
+    display: block;
+}
+
+.hesh-tag,
+.Pet-text,
+.Hash_and_text,
+.Big-text{
+    width: 100%;
+}
+.Big-text-span{
+    margin: auto;
+}
+.Big-text{
+    height: 10vh;
+}
+.button_class{
+    width: 100%;
+}
+.button_class > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.button_class > div > a {
+    width: 80%;
+    text-align: center;
+}
+.choose_a_date_section-BIG-text-span{
+    font-size: 24px;
+    line-height: 24px;
+    width: 100%;
+    font-weight: 599; 
+    text-align: center;
+}
+.choose_a_date_section-small-text-span{
+    font-size: 16px;
+    line-height: 16px;
+    width: 100%;
+}
+.choose_a_date_section-main-element{
+    width: 100%;
+}
+.calendar-header > span{
+    font-size: 18px;
+    line-height: 18px;
+}
+.calendar-mounts-span{
+    font-size: 24px;
+    line-height: 24px;
+}
+.calendar{
+    flex-direction: column;
+}
+.calendar-cal,
+.calendar-element,
+.calendar-main-ul{
+    width: 100% !important;
+}
+.calendar-ul-days,
+.calendar-ul-day-nums,
+.calendar-ul-day-nums{
+    gap: 0 !important;
+}
+.calendar-ul-days>li{
+    font-size: 18px;
+    line-height: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.calendar-ul-day-nums-1,
+.calendar-ul-day-nums-2{
+    font-size: 18px;
+    line-height: 18px;
+}
+.calendar-ul-day-nums-1{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.calendar-ul-day-nums-2{
+    padding-left: 15px;
+    padding-right: 15px;
+}
 }
