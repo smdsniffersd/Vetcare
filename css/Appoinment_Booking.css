@@ -644,6 +644,7 @@ letter-spacing: 0%;
 background: #FF9900;
 text-align: center;
 }
+
 .calendar-time-span-confirm:hover{
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -1368,5 +1369,156 @@ main{
 .calendar-ul-day-nums-2{
     padding-left: 15px;
     padding-right: 15px;
+}
+.calendar-footer-div > span {
+    font-size: 16px;
+    line-height: 16px;
+}
+.calendar-sumbit-button{
+    width: 100%;
+    display: block;
+    font-size: 16px !important;
+    line-height: 16px !important;
+    padding: 12px;
+    height: 5vh;
+}
+.calendar-time{
+    display: none;
+}
+.calendar-time--special,
+.calendar-buttons{
+    height: 3vh !important;
+}
+.calendar-time-span{
+    font-size: 18px;
+    line-height: 18px;
+    width: fit-content;
+    height: 2vh !important;
+    background-color: white;
+    color: #000000;
+    border: 1px solid black;
+    padding: 12px 24px;
+}
+.calendar-time-span:hover{
+    background-color: #f6e9d7;
+    color: #FF9900;
+    border: none;
+}
+.calendar-time-span:hover:last-child{
+    background-color: #FF9900;
+    color: #000000;
+}
+/* Dog before footer */
+.eighth-monit{
+    height: 60vh;
+}
+.eight-Big-text-span{
+    font-size: 32px;
+    line-height: 32px;
+}
+.eigth-button{
+    background: none;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 0%;
+    margin-top: 5vh;
+    height: auto;
+}
+.eigth-button > a {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    background-color: #FF9900;
+    padding: 2% 10%;
+    border-radius: 24px;
+    color: white;
+    text-align: center;
+}
+.eight-small-text-span{
+    display: block;
+    margin-top: 5vh;
+}
+/* FOOTER */
+.footer-our-messangers-matrix-ul-li-a{
+    color: black;
+}
+.footer-our-messangers-matrix li:nth-last-child(-n+2) {
+  display: none;
+}
+.footer-our-messangers-matrix{
+    width: 100%;
+    margin-top: 10vh !important;
+    float: left;
+}
+.footer-our-messangers-matrix-ul{
+    margin: 0;
+}
+.footer-main-element > div:nth-child(2){
+    width: 100% !important;
+    height: 70vh;
+}
+.big-lapka-div{
+    display: none;
+}
+.footer-icons{
+    display: block;
+    margin: 0%;
+    margin-top: 15vh;
+}
+.footer-icons-text-span{
+    font-size: 18px;
+    line-height: 18px;
+    width: fit-content;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.custom-background-section{
+    width: 20%;
+}
+.footer-main-block{
+    justify-content: flex-start;
+    float: left;
+    height: 50vh !important;
+    margin-left: 5vh;
+    width: 50% !important;
+}
+.footer-icons-img-link{
+    margin: 0% !important;
+}
+.footer-icons-img-link-ul:first-child{
+    margin-left: 0;
+}
+.big-lapka-small{
+    left: 15vh;
+    top: 45vh;
+}
+.footer{
+    height: 80vh !important;
+    margin: 3% 1vh 1% 1.5vh;
+}
+.custom-background-section{
+    height: 60vh;
+}
+.footer-our-messangers-matrix{
+    gap: 14px !important;
+}
+.footer-logo-img{
+    left: 5vh;
+}
+.eigth-button{
+  display: block;
+  background-color: white;
+  border: 1px solid black;
+  padding: 12px 24px;
+  color: #000000;
+  width: 80% !important;
+  margin-top: 5vh !important;
+}
+.eigth-button:hover{
+  background-color: #FF9900;
+  color: #FFFFFF;
+  border: none;
 }
 }
