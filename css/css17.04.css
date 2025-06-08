@@ -1069,8 +1069,8 @@ padding-top: 12px;
 padding-right: 24px;
 padding-bottom: 12px;
 padding-left: 24px;
-background: #FF9900;
-border: none;
+background: #ffffff;
+border: 1px solid black;
 }
 
 .logo-footer{
@@ -1349,7 +1349,7 @@ border: none;
 
 .Most_Popular-span{
     position: absolute;
-    margin-top: -35.7vh;
+    margin-top: -33vh;
 }
 .chat-button {
   position: fixed;

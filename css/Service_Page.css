@@ -157,18 +157,26 @@ a.Get{
     line-height: 18px;
     border: 1px solid black;
     padding: 12px 24px 12px 24px;
+        padding-bottom: 12px !important;
     height: 2vh;
     border-radius: 25px;
     text-align: center;
 }
 .Get:hover,
-.Book:hover {
-    color: white;
-    background-color: #FF9900;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  opacity: 0.8; 
-transform: scale(1.05); 
-border: none;
+.Book:hover,
+.book-cost{
+    color: white !important;
+    background-color: #FF9900 !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+    opacity: 0.8; 
+    transform: scale(1.05); 
+    border: none;
+}
+.book-cost,
+.pamper-text-links-book > div > a:hover{
+    padding-bottom: 18px !important;
+    background-color: white !important;
+    color: #000000 !important;
 }
 .header-mobi{
     display: none;
@@ -1610,7 +1618,7 @@ a.Get{
 .Book{
     color: black !important;
     background-color: white !important;
-    padding-bottom: 14px !important;
+    padding-bottom: 18px !important;
     width: 80%;
 }
 .Book:hover{

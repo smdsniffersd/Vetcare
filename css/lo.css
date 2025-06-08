@@ -900,6 +900,9 @@ color:  #FFFFFF !important;
   border-radius: 5px;
   cursor: pointer;
 }
+.header-mobi{
+    display: none;
+}
 @media (max-width: 768px) {
 .first-section-img {
         display: none;
