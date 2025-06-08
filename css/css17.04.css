@@ -128,17 +128,12 @@ a:active {
     padding: 3px;
     width: 33%;
 }
-.button_class .Book {
+.button_class > a:hover  {
     background-color: #FF9900;
     border: 0px;
     color: white;
-    border-radius: 25px;
-    font-size: 16px;
-    padding: 10px;
-    margin-top: 30px;
-    width: fit-content;
 }
-.button_class .Get {
+.Book, .Get {
     background-color: rgb(255, 255, 255);
     color: black;
     border-radius: 25px;
@@ -303,11 +298,11 @@ a:active {
 }
 
 .text-button-button {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 18px;
-    background-color: #FF9900;
+    background-color: #ffffff;
     border-radius: 25px;
-    border: none;
+    border: 1px solid black;
     box-shadow: none;
     outline: none;
     -webkit-appearance: none;
@@ -316,6 +311,11 @@ a:active {
     padding: 10px 20px;
     margin-top: 24px;
     float: right;
+}
+.text-button-button:hover{
+    border: none;
+    color: white;
+    background-color: #FF9900;
 }
 .ul_second_monit {
     width: 90%;
@@ -335,7 +335,7 @@ a:active {
     height: 52px;
     padding: 20px 0px 20px 0px;
 }
-.ul_second_monit .li_second_li {
+.ul_second_monit > li:hover {
     background-color: #f7e3c4;
     border: 1px solid #FF9900;
     border-radius: 24px;
@@ -461,7 +461,6 @@ h3 {
 }
 .small_Our_Service {
     display: flex;
-    width: 1312px;
     height: 847px;
     left: 64px;
     background: #FFFFFF;
@@ -490,8 +489,11 @@ h3 {
     border-radius: 24px;
 }
 .block-plan_ul {
+    padding: 0%;    
     display: flex;
-    margin: 24px 24px 24px 24px;
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
 }
 .block-plan_ul>li> {
     display: flex;
@@ -729,7 +731,7 @@ h3 {
     flex-grow: 0;
 }
 .tree-monit {
-    padding-top: 3%;
+    padding: 5% 0;
 }
 .vertical-line {
     width: 1px;
@@ -795,7 +797,7 @@ h3 {
     padding: 0%;
     margin: 0px 4px 4px 0px;
 }
-.li-speshial {
+.li-Meet_Our_Team:hover {
     font-family: 'Inter Tight';
     font-weight: 500;
     font-size: 18px;
@@ -810,6 +812,7 @@ h3 {
     padding-right: 24px;
     padding-bottom: 8px;
     padding-left: 24px;
+    cursor: pointer;
 }
 .nav-Meet_Our_Team{
     width: 90%;
@@ -956,7 +959,6 @@ h3 {
     display: flex;
     gap: 26px;
     margin-bottom: 3%;
-    min-width: 1280px;
     width: 90%;
 }
 .seventh-monit-photos-next{
@@ -972,6 +974,11 @@ h3 {
     border-radius: 50%;
     padding: 0%;
     margin-right: 2px;
+}
+.seventh-button-rigth:hover,
+.seventh-button-left:hover{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 .seventh-button-left{
     width: 45px;
@@ -1001,6 +1008,7 @@ h3 {
 }
 .seventh-monit-text-block{
     width: 75vh !important;
+    margin: auto;
 }
 .seventh-monit-buttons{
     display: flex;
@@ -1211,6 +1219,9 @@ border: none;
 .footer-main-element > div:last-child > div {
     width: 100%;
 }
+.footer-main-element > div {
+    height: auto;
+}
 .footer-main-block {
     display: flex;
     flex-direction: row;
@@ -1243,7 +1254,7 @@ border: none;
 .big-lapka-div {
     width: 442px;
     height: 442px;
-    top: 41.2%;
+    top: 21.1vh;
     left: 0px;
     background: url('../image/footer-main-big-lapka.png') no-repeat center / contain;
     z-index: 2;
@@ -1253,8 +1264,8 @@ border: none;
 .big-lapka-small {
     width: 117px;
     height: 117px;
-    top: 47%;
-    left: 50%;
+    top: 25vh;
+    left: 35vh;
     background: url('../image/footer-main-medium-lapka.png') no-repeat center / contain;
     z-index: 3;
 }
@@ -1262,8 +1273,8 @@ border: none;
 .big-lapka-small-second {
     width: 100px; /* Увеличено для поворота */
     height: 100px;
-    top: 35%;
-    left: 15%;
+    top: 20vh;
+    left: 13vh;
     transform: rotate(25.95 deg);
     background: url('../image/footer-main-small-lapka.png') no-repeat center / contain;
     z-index: 4;
@@ -1336,8 +1347,106 @@ border: none;
     display: none;
 }
 
+.Most_Popular-span{
+    position: absolute;
+    margin-top: -35.7vh;
+}
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  background: #FF9900;
+  border-radius: 24px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
 
+.chat-window {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+}
 
+.chat-header {
+  padding: 10px;
+  background: #FF9900;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-chat {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.message {
+  margin: 5px 0;
+  padding: 8px 12px;
+  border-radius: 5px;
+  max-width: 80%;
+}
+
+.message.operator {
+  background: #f1f1f1;
+  align-self: flex-start;
+}
+
+.message.user {
+  background: #F5F5F5;
+  color: rgb(0, 0, 0);
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.chat-input button {
+  padding: 8px 15px;
+  background: #FF9900;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 
 
@@ -1421,7 +1530,8 @@ a:active {
 .logo_text{
     font-family: 'Inter Tight', sans-serif;
     font-weight: bold;
-    font-size: 5vh;
+    font-size: 24px;
+    line-height: 24[x];
     padding-top: 8px;
     display: block;
     width: 100%;
@@ -1431,8 +1541,8 @@ a:active {
     display: flex;
 }
 .img_logo {
-    width: 80px;
-    height: 80px;
+    width: 45px;
+    height: 45px;
 }
 .header-mobi > button {
     width: 7.3vh;
@@ -1444,11 +1554,16 @@ a:active {
     width: 6vh;
     height: 6vh;
 }
+.header-mobi{
+    height: 8vh;
+}
 .menu-toggle {
+    width: 50px !important;
+    height: 50px !important;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1457,8 +1572,8 @@ a:active {
     border-radius: 12px;
 }
 .icons8-50{
-    width: 45px;
-    height: 45px;
+    width: 25px;
+    height: 25px;
 }
 .dot {
     width: 4px;
@@ -1517,19 +1632,22 @@ a:active {
 }
 .Big-text > span{
     font-size: 24px;
-    margin-bottom: 3%;
     line-height: 24px;
-    font-weight: 700;
+    margin-bottom: 2%;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: center;
 }
 .Big-text {
     width: 100%;
     height: auto;
+    margin-top: 5%;
 }
 .hesh-tag{
     width: fit-content;
 }
 .button_class{
-    width: fit-content;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     margin: auto;
@@ -1537,13 +1655,14 @@ a:active {
 
 }
 .button_class .Get{
-    width: 100%;
-    margin: 0%;
+    width: 80%;
+    margin: auto;
     text-align: center;
     margin-bottom: 5%;
 }
 .button_class .Book {
-width: 100%;
+width: 80%;
+margin: auto;
 margin-bottom: 5%;
 text-align: center;
 }
@@ -1567,6 +1686,7 @@ text-align: center;
     padding: 0%;
 }
 .like-footer{
+    padding: 2vh 0 !important;
     height: 20px;
 }
 .like-footer-ul > li > span{
@@ -1574,9 +1694,15 @@ text-align: center;
     text-align: center;
     margin-top: 8%;
     margin-right: 2%;
+    width: 100%;
+    display: inline-flex;
+}
+.like-footer-ul{
+    width: 100%;
 }
 .like-footer-ul > li{
-    display: block;
+    flex: 1;
+    gap: 1vh;
 }
 .small_lapka {
     height: 30px;
@@ -1626,6 +1752,9 @@ text-align: center;
 }
 .label{
     text-align: center;
+}
+.statistic{
+    margin-top: 1vh;
 }
 .statistic-ul > li > span{
     margin: 0%;
@@ -1687,9 +1816,13 @@ text-align: center;
 
 .carousel-container {
   display: flex;
+  width: 100%;
   transition: transform 0.5s ease;
 }
 
+.carousel-container{
+    width: 100%;
+}
 .carousel-item {
   min-width: 100%;
   padding: 20px;
@@ -1849,12 +1982,6 @@ text-align: center;
 .eight-Big-text-span{
     font-size: 36px;
 }
-.footer-our-messangers-matrix > li:nth-child(1) {
-    display: none;
-}
-.footer-our-messangers-matrix > li:nth-child(2) {
-    display: none;
-}
 .big-lapka-div{
     width: 180px;
     height: 180px;
@@ -1891,6 +2018,174 @@ text-align: center;
 html{
     width: 100%;
 }
+.Enroll-button-popular,
+.Enroll-button{
+    margin: 5% auto;
+}
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
 
+body {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img, video, iframe, object, embed {
+    max-width: 100%;
+    height: auto;
+}
+/* Dog before footer */
+.eighth-monit{
+    max-width: 768px;
+    height: 60vh;
+}
+.eight-Big-text-spans > span {
+    font-size: 30px;
+    line-height: 30px;
+}
+.eigth-button{
+    background: none;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 0%;
+    margin-top: 5vh;
+    height: auto;
+}
+a.eigth-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    background-color: #ffffff !important;
+    padding: 2% 10%;
+    border-radius: 24px;
+    color: white !important;
+    text-align: center;
+}
+.eight-small-text-span{
+    display: block;
+    margin-top: 5vh;
+}
+/* FOOTER */
+.footer-our-messangers-matrix-ul-li-a{
+    color: black;
+}
+.footer-our-messangers-matrix li:nth-last-child(-n+2) {
+  display: none;
+}
+.footer-our-messangers-matrix{
+    width: 100%;
+    margin-top: 10vh !important;
+    float: left;
+}
+.footer-our-messangers-matrix-ul{
+    margin: 0;
+}
+.footer-main-element > div:nth-child(2){
+    width: 100% !important;
+    height: 70vh;
+}
+.big-lapka-div{
+    display: none;
+}
+.footer-icons{
+    display: block;
+    margin: 0%;
+    margin-top: 15vh;
+}
+.footer-icons-text-span{
+    font-size: 18px;
+    line-height: 18px;
+    width: fit-content;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.custom-background-section{
+    width: 20%;
+}
+.footer-main-block{
+    justify-content: flex-start;
+    float: left;
+    height: 50vh !important;
+    margin-left: 5vh;
+    width: 50% !important;
+}
+.footer-icons-img-link{
+    margin: 0% !important;
+}
+.footer-icons-img-link-ul:first-child{
+    margin-left: 0;
+}
+.big-lapka-small{
+    left: 15vh;
+    top: 45vh;
+}
+.footer{
+    height: 80vh !important;
+    margin: 3% 1vh 1% 1.5vh;
+}
+.custom-background-section{
+    height: 60vh;
+}
+.footer-our-messangers-matrix{
+    gap: 14px !important;
+}
+.footer-logo-img{
+    left: 5vh;
+}
+.big-lapka-small-second{
+    top: 25vh;
+    left: 0vh;
+}
+.footer{
+    width: 95%;
+    margin: auto;
+}
+.li_h > img {
+    object-fit: contain;
+    height: 90px;
+    width: 90px;
+}
+
+.Get {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    background-color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 24px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.Get:hover{
+    background-color: #FF9900;
+    color: white;
+    border: none;
+    
+}.eigth-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    background-color: #ffffff !important;
+    padding: 12px 24px;
+    border-radius: 24px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border: 1px solid black;
+}
+.eigth-button:hover{
+    background-color: #FF9900 !important;
+    color: white;
+    border: none;
+    
+}
 }
