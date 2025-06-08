@@ -7,6 +7,7 @@
     <title>Emergency Service</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/Emergency_Service.css">
+    <link rel="stylesheet" href="css/total_css.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 </head>
@@ -57,29 +58,6 @@
                     <li><a class="Contact_button-mobi" href="contact_us.html">Contact Us</a></li>
                     <li><a href="#">Log in</a></li>
         </ul>
-        <script>
-                document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.getElementById('menuToggle');
-            const dropdownMenu = document.getElementById('dropdownMenu');
-            
-            menuToggle.addEventListener('click', function(e) {
-                e.stopPropagation(); // Предотвращаем всплытие события
-                dropdownMenu.classList.toggle('show');
-                menuToggle.style.display = 'none';
-            });
-            
-            // Закрываем меню при клике вне его области
-            document.addEventListener('click', function() {
-                dropdownMenu.classList.remove('show');
-                menuToggle.style.display = 'block';
-            });
-            
-            // Предотвращаем закрытие меню при клике внутри него
-            dropdownMenu.addEventListener('click', function(e) {
-                e.stopPropagation();
-            });
-        });
-        </script>
     </header>
     <main>
         <div class="Pet-text">
@@ -229,80 +207,7 @@
     </svg>
     <img src="image/icons8-вверх-64.png" alt="Up" class="progress-icon"/>
 </div> 
-<style>
-.progress-wrap {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    width: 55px;
-    height: 55px;
-    cursor: pointer;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(15px);
-    transition: all 0.2s linear;
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white; /* Фон для круга */
-}
 
-.progress-wrap.active-progress {
-    opacity: 0.8;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.progress-circle path {
-    stroke: #000; /* Цвет линии прогресса */
-    stroke-width: 4; /* Толщина линии */
-    fill: none; /* Убедитесь, что заливка отключена */
-}
-
-.progress-icon {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    pointer-events: none; /* Чтобы клики проходили сквозь иконку */
-}
-</style>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const progressWrap = document.querySelector('.progress-wrap');
-    const progressPath = document.querySelector('.progress-circle path');
-    const pathLength = progressPath.getTotalLength();
-    
-    progressPath.style.strokeDasharray = pathLength;
-    progressPath.style.strokeDashoffset = pathLength;
-    
-    window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY || window.pageYOffset;
-        const windowHeight = window.innerHeight;
-        const docHeight = document.documentElement.scrollHeight;
-        const scrollPercent = scrollY / (docHeight - windowHeight);
-        const offset = pathLength - (scrollPercent * pathLength);
-        
-        progressPath.style.strokeDashoffset = offset;
-        
-        if (scrollY > 100) {
-            progressWrap.classList.add('active-progress');
-        } else {
-            progressWrap.classList.remove('active-progress');
-        }
-    });
-    
-    progressWrap.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-});
-</script>
         </div>
 
     </section>
@@ -538,19 +443,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </footer>
 <div class="chat-container">
-  <!-- Кнопка -->
+
   <button id="chat-button" class="chat-button">
     Veterinarian Online
   </button>
 
-  <!-- Окно чата (изначально скрыто) -->
+
   <div id="chat-window" class="chat-window">
     <div class="chat-header">
       <h3>Support Chat</h3>
       <button id="close-chat" class="close-chat">×</button>
     </div>
     <div class="chat-body" id="chat-body">
-      <!-- Здесь могут быть сообщения -->
       <div class="message operator">Hey! How I can help you?</div>
     </div>
     <div class="chat-input">
@@ -559,54 +463,6 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   </div>
 </div>
-<script>
-
-    document.addEventListener('DOMContentLoaded', function() {
-  const chatButton = document.getElementById('chat-button');
-  const chatWindow = document.getElementById('chat-window');
-  const closeChat = document.getElementById('close-chat');
-  const userInput = document.getElementById('user-input');
-  const sendButton = document.getElementById('send-button');
-  const chatBody = document.getElementById('chat-body');
-
-  // Открыть/закрыть чат
-  chatButton.addEventListener('click', function() {
-    chatWindow.style.display = chatWindow.style.display === 'flex' ? 'none' : 'flex';
-  });
-
-  closeChat.addEventListener('click', function() {
-    chatWindow.style.display = 'none';
-  });
-
-  // Отправка сообщения
-  function sendMessage() {
-    const message = userInput.value.trim();
-    if (message) {
-      const userMessage = document.createElement('div');
-      userMessage.className = 'message user';
-      userMessage.textContent = message;
-      chatBody.appendChild(userMessage);
-      userInput.value = '';
-
-      // Прокрутка вниз
-      chatBody.scrollTop = chatBody.scrollHeight;
-
-      // Имитация ответа оператора (можно заменить на реальный API)
-      setTimeout(() => {
-        const operatorMessage = document.createElement('div');
-        operatorMessage.className = 'message operator';
-        operatorMessage.textContent = 'Thanks for the message! We will respond to you as soon as possible.';
-        chatBody.appendChild(operatorMessage);
-        chatBody.scrollTop = chatBody.scrollHeight;
-      }, 1000);
-    }
-  }
-
-  sendButton.addEventListener('click', sendMessage);
-  userInput.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') sendMessage();
-  });
-});
-</script>
+    <script src="scripts/total_js.js"></script>
     </body>
 </html>
