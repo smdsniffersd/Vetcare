@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="image/small_lapka.png">
     <meta name="msapplication-TileImage" content="image/small_lapka.png">
     <link rel="stylesheet" href="css/Testimonials.css">
+    <link rel="stylesheet" href="css/total_css.css">
 </head>
 <body>
     
@@ -34,7 +35,7 @@
 
         
 
-        <button class="Contact_button">Log in</button>
+        <button  id="loginBtn"   class="Contact_button"><a href="#">Log in</a></button>
 
 
     </header>
@@ -58,7 +59,7 @@
                     <li><a href="Service_Page.html">Our Service</a></li>
                     <li><a href="about_us.html">About Us</a></li>
                     <li><a href="contact_us.html">Contact Us</a></li>
-                    <li><a href="#">Log in</a></li>
+                    <li><button id="loginBtn">Log in</button></li>
         </ul>
     </header>
 
@@ -366,9 +367,22 @@
     </div>
   </div>
 </div>
-
-<script src="scripts/Testimonials.js"></script>
+<div id="loginOverlay">
+        <div id="loginWindow">
+            <h2>Log in</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <div>
+                    <button type="submit">Log in</button>
+                    <button type="button" id="cancelBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
 <script src="scripts/total_js.js"></script>
+<script src="scripts/Testimonials.js"></script>
+
 
 </body>
 

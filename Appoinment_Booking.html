@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="eu">
 
 <head>
     <link rel="icon" type="image/png" sizes="16x16" href="image/small_lapka.png">
@@ -32,7 +32,7 @@
             </nav>
             
 
-            <a href="contact_us.html" class="Contact_button"> Log in</a>
+           <button  id="loginBtn"   class="Contact_button"><a href="#">Log in</a></button>
 
 
     </header>
@@ -56,6 +56,7 @@
                     <li><a href="Service_Page.html">Our Service</a></li>
                     <li><a href="about_us.html">About Us</a></li>
                     <li><a class="Contact_button-mobi" href="contact_us.html">Contact Us</a></li>
+                    <li><button id="loginBtn">Log in</button></li>
         </ul>
     </header>
     <main>
@@ -270,7 +271,7 @@
                             
 
                         </div>
-                        <div class="calendar-time--special">
+                        <div class="calendar-time--special kilfo">
                             <div class="calendar-buttons">
                                 <button><img src="image/calendar-button-img-left.png" alt="calendar-button-img-left" class="calendar-button-img-left"></button>
                                 <span class="calendar-time-span">11.30 AM</span>
@@ -451,14 +452,12 @@
     Veterinarian Online
   </button>
 
-  <!-- Окно чата (изначально скрыто) -->
   <div id="chat-window" class="chat-window">
     <div class="chat-header">
       <h3>Support Chat</h3>
       <button id="close-chat" class="close-chat">×</button>
     </div>
     <div class="chat-body" id="chat-body">
-      <!-- Здесь могут быть сообщения -->
       <div class="message operator">Hey! How I can help you?</div>
     </div>
     <div class="chat-input">
@@ -467,6 +466,19 @@
     </div>
   </div>
 </div>
+<div id="loginOverlay">
+        <div id="loginWindow">
+            <h2>Log in</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <div>
+                    <button type="submit">Log in</button>
+                    <button type="button" id="cancelBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <script src="scripts/total_js.js"></script>
     <script src="scripts/Appoinment_Booking.js"></script>
     </body>

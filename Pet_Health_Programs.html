@@ -1,4 +1,4 @@
-<html lang="ru">
+<html lang="eu">
 
 
 
@@ -39,7 +39,7 @@
 
         
 
-        <button class="Contact_button"><a href="#">Log in</a></button>
+        <button  id="loginBtn"   class="Contact_button"><a href="#">Log in</a></button>
 
 
     </header>
@@ -63,7 +63,7 @@
                         <li><a href="Service_Page.html">Our Service</a></li>
                         <li><a href="about_us.html">About Us</a></li>
                         <li><a href="contact_us.html">Contact Us</a></li>
-                        <li><a href="#">Log in</a></li>
+                        <li><button id="loginBtn">Log in</button></li>
             </ul>
     </header>
 
@@ -731,7 +731,6 @@
 
 </footer>
 <div class="chat-container">
-  <!-- Кнопка -->
   <button id="chat-button" class="chat-button">
     Veterinarian Online
   </button>
@@ -751,7 +750,19 @@
     </div>
   </div>
 </div>
-
+<div id="loginOverlay">
+        <div id="loginWindow">
+            <h2>Log in</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <div>
+                    <button type="submit">Log in</button>
+                    <button type="button" id="cancelBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
 <script src="scripts/total_js.js"></script>
 <script src="scripts/index.js"></script>
 </html>

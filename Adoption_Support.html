@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="eu">
 
 <head>
 
@@ -34,7 +34,7 @@
             </nav>
             
 
-            <a href="contact_us.html" class="Contact_button">Log in</a>
+            <button  id="loginBtn"   class="Contact_button"><a href="#">Log in</a></button>
 
 
     </header>
@@ -58,6 +58,7 @@
                     <li><a href="Service_Page.html">Our Service</a></li>
                     <li><a href="about_us.html">About Us</a></li>
                     <li><a class="Contact_button-mobi" href="contact_us.html">Contact Us</a></li>
+                    <li><button id="loginBtn">Log in</button></li>
         </ul>
     </header>
     <main>
@@ -466,7 +467,19 @@
     </div>
   </div>
 </div>
-
+<div id="loginOverlay">
+        <div id="loginWindow">
+            <h2>Log in</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <div>
+                    <button type="submit">Log in</button>
+                    <button type="button" id="cancelBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
 <script src="scripts/total_js.js"></script>
 <script src="scripts/Adoption_Support.js"></script>
 </body>

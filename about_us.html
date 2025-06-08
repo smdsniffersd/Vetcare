@@ -38,7 +38,7 @@
 
         
 
-        <button class="Contact_button"><a href="contact_us.html">Log in</a></button>
+        <button  id="loginBtn"   class="Contact_button"><a href="#">Log in</a></button>
 
 
 </header>
@@ -62,6 +62,7 @@
                     <li><a href="Service_Page.html">Our Service</a></li>
                     <li><a href="about_us.html">About Us</a></li>
                     <li><a class="Contact_button-mobi" href="contact_us.html">Contact Us</a></li>
+                    <li><button id="loginBtn">Log in</button></li>
         </ul>
         
 </header>
@@ -212,12 +213,12 @@
 </section>
 <section class="fourth-section"> 
     <div class="second-monit-2">
-        <div class="second-monit-2-main-text"> <!-- Big text -->
+        <div class="second-monit-2-main-text">
             <span class="second-monit-2-main-Big-text">Ensuring Comprehensive</span>
             <span class="second-monit-2-main-Big-text">Care and Support for</span>
             <span class="second-monit-2-main-Big-text">Your Beloved Pet's</span>
         </div>
-        <div class="text-button">  <!--Text with button  -->
+        <div class="text-button">
 
         <span class="text-button-span">Ensuring Comprehensive Care and Support for</span>
         <span class="text-button-span">Your Beloved Pet's</span>
@@ -965,6 +966,22 @@
     </div>
   </div>
 </div>
+
+
+<div id="loginOverlay">
+        <div id="loginWindow">
+            <h2>Log in</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <div>
+                    <button type="submit">Log in</button>
+                    <button type="button" id="cancelBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
 
 <script src="scripts/total_js.js"></script>
 </body>
