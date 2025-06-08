@@ -1,0 +1,45 @@
+span{
+    display: block;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5vh;
+}
+.dog-img{
+    width: 45vh;
+    height: 45vh;
+    border-radius: 24px;
+}
+.info > div{
+    padding: 4.5vh;
+    border-radius: 24px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.header-info{
+    font-size: 24px;
+    line-height: 24px;
+    padding: 3vh;
+    border-radius: 24px;
+    color: white;
+    background-color: #FF990f;
+    margin-bottom: 3vh;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.info-of-person-span{
+    margin-bottom: 2vh;
+    font-size: 18px;
+    line-height: 18px;
+}
+.info-of-Medical-information{
+    margin-top: 15vh;
+}
+.info-of-pet-descr{
+    margin-top: 2vh;
+}
+.person{
+    padding: 4.5vh;
+    border-radius: 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
