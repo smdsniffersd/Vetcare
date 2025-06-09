@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
   
   thumbnails.forEach(thumbnail => {
     thumbnail.addEventListener('click', function() {
-      // Меняем местами src большого и маленького изображения
       const tempSrc = mainImg.src;
       const tempAlt = mainImg.alt;
       

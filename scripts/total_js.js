@@ -8,18 +8,16 @@
             const dropdownMenu = document.getElementById('dropdownMenu');
             
             menuToggle.addEventListener('click', function(e) {
-                e.stopPropagation(); // Предотвращаем всплытие события
+                e.stopPropagation();
                 dropdownMenu.classList.toggle('show');
                 menuToggle.style.display = 'none';
             });
             
-            // Закрываем меню при клике вне его области
             document.addEventListener('click', function() {
                 dropdownMenu.classList.remove('show');
                 menuToggle.style.display = 'block';
             });
             
-            // Предотвращаем закрытие меню при клике внутри него
             dropdownMenu.addEventListener('click', function(e) {
                 e.stopPropagation();
             });
@@ -67,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.querySelector('.carousel-prev');
     const nextBtn = document.querySelector('.carousel-next');
     
-    if (container && prevBtn && nextBtn) { // Проверка на существование элементов
+    if (container && prevBtn && nextBtn) {
         let currentIndex = 0;
 
         nextBtn.addEventListener('click', () => {
@@ -93,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const sendButton = document.getElementById('send-button');
   const chatBody = document.getElementById('chat-body');
 
-  // Открыть/закрыть чат
   chatButton.addEventListener('click', function() {
     chatWindow.style.display = chatWindow.style.display === 'flex' ? 'none' : 'flex';
   });
@@ -102,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
     chatWindow.style.display = 'none';
   });
 
-  // Отправка сообщения
   function sendMessage() {
     const message = userInput.value.trim();
     if (message) {
@@ -112,10 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
       chatBody.appendChild(userMessage);
       userInput.value = '';
 
-      // Прокрутка вниз
       chatBody.scrollTop = chatBody.scrollHeight;
 
-      // Имитация ответа оператора (можно заменить на реальный API)
       setTimeout(() => {
         const operatorMessage = document.createElement('div');
         operatorMessage.className = 'message operator';
@@ -136,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const loginBtn = document.getElementById('loginBtn');
     const cancelBtn = document.getElementById('cancelBtn');
     const loginOverlay = document.getElementById('loginOverlay');
-    const loginForm = document.querySelector('#loginOverlay form'); // выбираем форму внутри overlay
+    const loginForm = document.querySelector('#loginOverlay form');
     
     loginBtn.addEventListener('click', function() {
         loginOverlay.style.display = 'flex';
@@ -147,16 +141,14 @@ document.addEventListener('DOMContentLoaded', function() {
         loginOverlay.style.display = 'none';
     });
     
-    // Закрытие при клике вне окна
     loginOverlay.addEventListener('click', function(e) {
         if (e.target === loginOverlay) {
             loginOverlay.style.display = 'none';
         }
     });
     
-    // Обработчик отправки формы
     loginForm.addEventListener('submit', function(e) {
-        e.preventDefault(); // отменяем стандартную отправку формы
+        e.preventDefault();
     
         window.location.href = "user_account.html";
 
