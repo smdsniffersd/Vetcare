@@ -142,9 +142,9 @@ a:active {
     color: #1B1B1B;
 }
 .button_class .Book {
-    background-color: #FF9900;
-    border: 0;
-    color: white;
+    background-color: #ffffff;
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
     border-radius: 25px;
     font-size: 16px;
     padding: 12px 24px 12px 24px;
@@ -153,12 +153,15 @@ a:active {
     transition: 0.3s;
 }
 .button_class .Book:hover {
+    background-color: #FF9900;
+    border: none;
+    color: rgb(255, 255, 255);
     opacity: 0.8; 
     transform: scale(1.05); 
   }
-.button_class  .Get{
-    background-color: rgb(255, 255, 255);
-    color: black;
+.Get{
+    background-color: rgb(255, 255, 255) !important;
+    color: black !important;
     border-radius: 25px;
     font-size: 16px;
     padding: 12px 24px 12px 24px;
@@ -166,7 +169,7 @@ a:active {
     border-width: 1px;
     cursor: pointer; 
     transition: 0.3s;
-    border: 1px solid black;
+    border: 1px solid black !important;
     display: block;
 }
 .button_class .Get:hover {
@@ -383,14 +386,12 @@ cursor: pointer;
     padding: 8px 24px;
 }
 .tree-section-main-element-nav > li:hover{
+    background-color: #1B1B1B;
+    color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
 
-.tree-section-main-element-nav > li:first-child {
-    background-color: #1B1B1B;
-    color: white;
-}
 
 .tree-section-main-element-searchbar {
     width: 20%;
@@ -1311,5 +1312,12 @@ border: none;
 }
 .fourth-section-img-block-img{
     width: 100% !important;
+}
+.m-span{
+    text-align: center;
+}
+.second-section-left-block-text-element{
+    width: 80%;
+    margin: auto;
 }
 }

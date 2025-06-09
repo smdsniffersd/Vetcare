@@ -1806,7 +1806,15 @@ text-align: center;
 .text-button-span{
     text-align: center;
 }
-
+.text-button{
+    display: flex;
+    flex-direction: column;
+}
+.text-button-button{
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
 .carousel {
     display: block;
   position: relative;
@@ -2172,16 +2180,17 @@ a.eigth-button {
     color: white;
     border: none;
     
-}.eigth-button {
+}
+a.eigth-button {
     display: flex;
     justify-content: center;
     margin-top: 2vh;
     background-color: #ffffff !important;
     padding: 12px 24px;
     border-radius: 24px;
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0) !important;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid black !important;
 }
 .eigth-button:hover{
     background-color: #FF9900 !important;
@@ -2189,8 +2198,26 @@ a.eigth-button {
     border: none;
     
 }
+.doctor-exp,
+.bag-doctors-img{
+    display: none;
+}
+.doctor-name{
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    margin: 1vh auto;
+    margin-left: 1vh;
+}
+.doctors-descrip{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .main-text-second{
     width: 80%;
+    margin: auto;
+    margin-bottom: 2vh;
 }
 body{
     width: 100%;
@@ -2202,5 +2229,21 @@ body, html {
 .main {
     width: 100% !important;
     margin: 0 !important;
+}
+.seventh-monit-span-main{
+    font-size: 16px !important;
+    line-height: 16px !important;
+}
+.arrow-black-img{
+    width: 3vh;
+    height: 3vh;
+    margin-top: 0.5vh;
+}
+.seventh-button-rigth,
+.seventh-button-left{
+
+    width: 4vh;
+    height: 4vh;
+
 }
 }

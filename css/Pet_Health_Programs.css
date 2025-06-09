@@ -136,9 +136,9 @@ a:active {
 }
 
 .button_class .Book {
-    background-color: #FF9900;
-    border: 0;
-    color: white;
+    background-color: #ffffff;
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
     border-radius: 25px;
     font-size: 16px;
     padding: 12px 24px 12px 24px;
@@ -1631,5 +1631,14 @@ border: none;
 .Get{
     margin: 0% 3% !important;
     margin-top: 5% !important;
+}
+.second-block-element-midle-text{
+    width: 80%;
+    margin: auto;
+}
+.Book{
+    background-color: white !important;
+    border: 1px solid black !important;
+    color: black !important;
 }
 }

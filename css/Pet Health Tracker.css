@@ -1581,6 +1581,7 @@ main,
     flex-direction: column;
     justify-content: center;
     width: 80%;
+    margin: auto;
 }
 .button_class > a {
     border: 1px solid black;
@@ -1633,5 +1634,25 @@ main,
 }
 .header-mobi{
     display: flex;
+}
+.underline-img{
+    width: 15vh;
+    height: 7.5vh;
+}
+.button_class{
+    margin: 0% auto;
+
+}
+main{
+    padding-bottom: 0%;
+}
+.bottom-get{
+    display: block;
+    width: 80%;
+    text-align: center;
+}
+.top-calendar{
+    width: 90% !important;
+    margin: auto;
 }
 }

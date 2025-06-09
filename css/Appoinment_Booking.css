@@ -1625,4 +1625,7 @@ main{
 .kilfo{
     display: flex;
 }
+.form-group{
+  flex-direction: column;
+}
 }
